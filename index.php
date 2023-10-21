@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1>Healthy Foods Kelompok 2</h1>
-    <h1>halo metiw</h1>
+    <h1>halo smetiw</h1>
 </body>
 </html>
