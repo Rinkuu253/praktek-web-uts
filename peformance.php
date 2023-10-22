@@ -28,6 +28,16 @@ include "sqlConnect.php"
             margin-bottom: 25px;
         }
 
+        .table-title {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 120%;
+            letter-spacing: -0.03em;
+            color: #262626;
+        }
+
         h2 {
             font-size: 1.875rem;
         }
@@ -37,12 +47,27 @@ include "sqlConnect.php"
 
 <body>
     <div class="container">
-        <div class="content-body ">
+        <div class="content-body">
             <div class="content-fluid">
-                <h1 class="PageTitle">Daftar Karyawan</h1>
+                <h1 class="PageTitle mt-3">Daftar Karyawan</h1>
                 <div class="card">
                     <div class="card-body">
-                        <h2>Peforma Karyawan</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <h2 class="table-title mt-1">Peforma Karyawan</h2>
+                            </div>
+                            <div class="col-4 d-flex justify-content-end">
+                                <input type="text" class="form-control inputForm" placeholder="Cari karyawan..." />
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn btn-primary" style="height: 100%; width: 100%;">
+                                    Tambah Baru +
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="table-responsive p-3">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -53,7 +78,7 @@ include "sqlConnect.php"
                                     <th>Posisi</th>
                                     <th>Total</th>
                                     <th>Grade</th>
-                                    <th>Aksi</th>
+                                    <th style="text-align:center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,7 +98,7 @@ include "sqlConnect.php"
                                             <td><?php echo $row["position"] ?></td>
                                             <td><?php echo $row["total"] ?></td>
                                             <td><?php echo $row["grade"] ?></td>
-                                            <td>
+                                            <td align="center">
                                                 <a href="view_performance.php?nik=<?php echo $row['nik']; ?>"><button type="button" class="btn btn-info" style="width:75pxs">View</button></a>
                                                 <a href="edit_performance.php?nik=<?php echo $row['nik']; ?>"><button type="button" class="btn btn-info" style="width:75pxs">Edit</button></a>
                                                 <a href="delete_peformance.php?id=<?php echo $row['nik']; ?>" onclick="return hapus()"><button type="button" class="btn btn-danger" style="width:75px">Delete</button></a>
@@ -88,10 +113,9 @@ include "sqlConnect.php"
                         </table>
                     </div>
                 </div>
-
             </div>
         </div>
-
+    </div>
     </div>
 
 </body>
