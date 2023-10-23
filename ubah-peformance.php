@@ -38,11 +38,11 @@ $result = mysqli_query($conn, $sql);
 
 if ($result) {
     if (!$foto) {
-        header("location:peformance.php");
+        header("location:performance.php");
     } else {
         $upload = uploadImage($nik);
         if ($upload) {
-            header("location:peformance.php");
+            header("location:performance.php");
         } else {
             echo "gagal aplod";
         }

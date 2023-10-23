@@ -60,7 +60,7 @@ include "sqlConnect.php"
                             <input type="text" class="form-control mb-3" placeholder="Cari karyawan..." />
                         </div>
                         <div class="col-md-2">
-                            <a href="tambah-peformance.php" class="btn btn-primary btn-fungsi" style="background-color:white;color:black;border:1;border-color:#40916C">
+                            <a href="tambah-performance.php" class="btn btn-primary btn-fungsi" style="background-color:white;color:black;border:1;border-color:#40916C">
                                 Tambah Baru +
                             </a>
                         </div>

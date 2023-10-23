@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Tambah Peforma</title>
+    <title>Tambah Performa</title>
 
     <style>
         .container {
@@ -94,7 +94,7 @@
         <div class="content-body">
             <div class="content-fluid">
                 <h1 class="PageTitle mt-3">Tambah Karyawan</h1>
-                <form action="add-peformance.php" method="POST" enctype="multipart/form-data" onsubmit="return simpan()">
+                <form action="add-performance.php" method="POST" enctype="multipart/form-data" onsubmit="return simpan()">
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
@@ -182,7 +182,7 @@
                                 <div class="btn btn-primary" style="background-color:#40916C;width:10%;" data-bs-toggle="modal" data-bs-target="#modalSimpan">
                                     Simpan
                                 </div>
-                                <a href="peformance.php" target="_self">
+                                <a href="performance.php" target="_self">
                                     <div class="btn btn-primary" style="background-color:white;width:10%;border:2;border-color:#40916C;color:black;">
                                         Batal
                                     </div>

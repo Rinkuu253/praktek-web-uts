@@ -13,7 +13,7 @@ $result = mysqli_query($conn, $sql);
 if ($result) {
     $removeok = removeFile($img);
     if ($removeok) {
-        header("location:peformance.php");
+        header("location:performance.php");
     }
 } else {
     echo "Gagal Menghapus";

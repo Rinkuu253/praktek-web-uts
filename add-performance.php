@@ -41,7 +41,7 @@ if ($ok) {
 
 
 if ($result) {
-    header("location:peformance.php");
+    header("location:performance.php");
 } else {
     echo "failed to make record";
 }
