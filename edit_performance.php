@@ -116,7 +116,7 @@ if ($result->num_rows > 0) {
                                     <label>
                                         Nama
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="nama" id="nama" placeholder="Masukan Nama" type="text" required readonly value="<?php echo ($nama) ?>" />
+                                    <input class="form-control inputForm mt-2" name="nama" id="nama" placeholder="Masukan Nama" type="text" required value="<?php echo ($nama) ?>" />
                                 </div>
                                 <div class="col-6 form-input mt-2">
                                     <label>

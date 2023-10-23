@@ -12,7 +12,7 @@ $responsibility = trim($_POST['responsibility']);
 $teamwork = trim($_POST['teamwork']);
 $management = trim($_POST['management']);
 $file_extension = pathinfo($_FILES["inputFoto"]["name"], PATHINFO_EXTENSION);
-$foto = $nik . "_" . $nama . "." . $file_extension;
+$foto = $nik . "." . $file_extension;
 
 $total = ($responsibility * 30 / 100) + ($teamwork * 30 / 100) + ($management * 40 / 100);
 $grade = "D";
@@ -32,7 +32,7 @@ $sql = "INSERT INTO performance (nik, foto, nama, status_kerja, position, tgl_pe
 VALUES ('$nik', '$foto' , '$nama', '$statusKerja', '$posisi', '$tglPenilaian', '$responsibility','$teamwork','$management','$total','$grade')";
 
 $result = 0;
-$ok = uploadImage($nik, $nama);
+$ok = uploadImage($nik);
 if ($ok) {
     $result = mysqli_query($conn, $sql);
 } else {

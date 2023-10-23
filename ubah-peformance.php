@@ -11,9 +11,8 @@ $statusKerja = trim($_POST['statusKerja']);
 $responsibility = trim($_POST['responsibility']);
 $teamwork = trim($_POST['teamwork']);
 $management = trim($_POST['management']);
-$photoAvaiable =
 
-    $total = ($responsibility * 30 / 100) + ($teamwork * 30 / 100) + ($management * 40 / 100);
+$total = ($responsibility * 30 / 100) + ($teamwork * 30 / 100) + ($management * 40 / 100);
 $grade = "D";
 
 if ($total >= 80) {
@@ -26,8 +25,6 @@ if ($total >= 80) {
     $grade = "D";
 }
 
-
-
 $sql = "UPDATE `performance` SET `nama` = '$nama', `status_kerja` = '$statusKerja', `position` = '$posisi', `tgl_penilaian` = '$tglPenilaian', `responsibility` = '$responsibility', `teamwork` = '$teamwork', `management_time` = '$management', `total` = '$total', `grade` = '$grade'";
 
 $sql .= "WHERE `performance`.`nik` = '$nik'";
@@ -38,7 +35,7 @@ if ($result) {
     if (!$foto) {
         header("location:peformance.php");
     } else {
-        $upload = uploadImage($nik, $nama);
+        $upload = uploadImage($nik);
         if ($upload) {
             header("location:peformance.php");
         } else {

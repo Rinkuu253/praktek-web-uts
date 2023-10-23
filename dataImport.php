@@ -1,11 +1,11 @@
 <?php
-function uploadImage($nik, $nama)
+function uploadImage($nik)
 {
     // Mendapatkan ekstensi file
     $file_extension = pathinfo($_FILES["inputFoto"]["name"], PATHINFO_EXTENSION);
 
     // Menyusun nama file baru dengan format nik_nama.ekstensi
-    $new_filename = $nik . "_" . $nama . "." . $file_extension;
+    $new_filename = $nik . "." . $file_extension;
 
     $target_dir = "databaseFoto/";
     $target_file = $target_dir . basename($new_filename);
