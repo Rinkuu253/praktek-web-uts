@@ -41,6 +41,16 @@ include "sqlConnect.php"
         h2 {
             font-size: 1.875rem;
         }
+
+        .btn-fungsi {
+            height: 100%;
+            width: 100%;
+            border: 1;
+            border-width: 2px;
+            border-color: #40916C;
+            background-color: white;
+            color: black;
+        }
     </style>
     <title>Peformance</title>
 </head>
@@ -60,9 +70,11 @@ include "sqlConnect.php"
                                 <input type="text" class="form-control inputForm" placeholder="Cari karyawan..." />
                             </div>
                             <div class="col-2">
-                                <button type="button" class="btn btn-primary" style="height: 100%; width: 100%;">
-                                    Tambah Baru +
-                                </button>
+                                <a href="tambah-peformance.php">
+                                    <button type="button" class="btn btn-primary btn-fungsi">
+                                        Tambah Baru +
+                                    </button>
+                                </a>
                             </div>
                         </div>
 
