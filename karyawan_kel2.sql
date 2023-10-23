@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2023 at 12:06 PM
+-- Generation Time: Oct 23, 2023 at 08:19 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -38,7 +38,7 @@ CREATE TABLE `performance` (
   `teamwork` decimal(10,2) NOT NULL,
   `management_time` decimal(10,2) NOT NULL,
   `total` decimal(10,2) NOT NULL,
-  `grade` decimal(10,2) NOT NULL
+  `grade` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
