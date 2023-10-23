@@ -154,21 +154,21 @@ if ($result->num_rows > 0) {
                                     </div>
                                     <div class="col-4 form-input mt-2">
                                         <label class="view-title">
-                                            Responsibility (30%)
+                                            Responsibility
                                         </label>
                                         <br />
                                         <label><?php echo ($responsibility) ?> / 100.00</label>
                                     </div>
                                     <div class="col-4 form-input mt-2">
                                         <label class="view-title">
-                                            Teamwork (30%)
+                                            Teamwork
                                         </label>
                                         <br />
                                         <label class="view-value"><?php echo ($teamwork) ?> / 100.00</label>
                                     </div>
                                     <div class="col-4 form-input mt-2">
                                         <label class="view-title">
-                                            Management Time (40%)
+                                            Management Time
                                         </label>
                                         <br />
                                         <label class="view-value"><?php echo ($management) ?> / 100.00</label>

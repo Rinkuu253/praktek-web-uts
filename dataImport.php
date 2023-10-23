@@ -1,14 +1,14 @@
 <?php
-function uploadImage()
+function uploadImage($nik)
 {
     $target_dir = "databaseFoto/";
-    $target_file = $target_dir . basename($_FILES["inputFoto"]["name"]);
+    $target_file = $target_dir . $nik;
     $uploadOk = 1;
     if ($uploadOk == 0) {
         echo "Maaf, File tidak bisa terunggah.";
     } else {
         // if everything is ok, try to upload file
-        if (move_uploaded_file($_FILES["inputFoto"]["tmp_name"], $target_file)) {
+        if (move_uploaded_file($nik, $target_file)) {
         } else {
             echo "Maaf, File tidak bisa terunggah.";
             $uploadOk = 0;
