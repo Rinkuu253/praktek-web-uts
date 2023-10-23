@@ -113,7 +113,33 @@ include "sqlConnect.php"
                                             <td align="center">
                                                 <a href="view_performance.php?nik=<?php echo $row['nik']; ?>"><button type="button" class="btn btn-info" style="width:75pxs">View</button></a>
                                                 <a href="edit_performance.php?nik=<?php echo $row['nik']; ?>"><button type="button" class="btn btn-info" style="width:75pxs">Edit</button></a>
-                                                <a href="delete_performance.php?nik=<?php echo $row['nik']; ?>&img=<?php echo $row['foto'] ?>" onclick="return hapus()"><button type="button" class="btn btn-danger" style="width:75px">Delete</button></a>
+                                                <button type="button" class="btn btn-danger" style="width:75px" data-bs-toggle="modal" data-bs-target="#modalHapus">Delete</button>
+                                                <div class="modal fade" id="modalHapus">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+
+                                                            <!-- Modal Header -->
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Hapus Data</h4>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                            </div>
+
+                                                            <!-- Modal body -->
+                                                            <div class="modal-body">
+                                                                Apakah anda yakin ingin menghapus data ini?
+                                                                Data yang dihapus tidak dapat dikembalikan
+                                                            </div>
+
+                                                            <!-- Modal footer -->
+                                                            <div class="modal-footer">
+                                                                <a href="delete_performance.php?nik=<?php echo $row['nik']; ?>&img=<?php echo $row['foto'] ?>">
+                                                                    <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button> </a>
+                                                                <div class="btn btn-danger" data-bs-dismiss="modal" style="background-color:white;color:black;border:2;border-color:#da3544">Tidak</div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                 <?php
@@ -126,6 +152,7 @@ include "sqlConnect.php"
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     </div>
