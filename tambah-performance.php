@@ -101,49 +101,48 @@
                                 <div class="col-6">
                                     <h3>Informasi dan Performa Karyawan</h3>
                                 </div>
-                                <div class="col-6 d-flex justify-content-end">
-                                    <div class="btn btn-danger" style="width:20%" data-bs-toggle="modal" data-bs-target="#modalClear">
-                                        Clear
+                                <div class="col-6">
+                                    <div class="d-flex justify-content-end">
+                                        <div class="btn btn-danger" style="width:100%; max-width:150px" data-bs-toggle="modal" data-bs-target="#modalClear">
+                                            Clear
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mt-4">
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 form-input mt-2">
                                     <img src="images/defaultProfile.jpg" alt="No Image" id="previewFoto" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
 
                                     <div class="mt-3">
-                                        <input class="form-control inputForm" type="file" placeholder="Pilih Foto" id="inputFoto" name="inputFoto" accept="image/*" required>
+                                        <input class="form-control inputForm" type="file" placeholder="Pilih Foto" id="inputFoto" name="inputFoto" accept="image/*" style="max-width:50%;" required>
                                     </div>
 
                                 </div>
-                                <div class="col-6 form-input mt-2">
-
-                                </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6 form-input mt-2">
                                     <label>
                                         NIK
                                     </label>
                                     <input class="form-control inputForm mt-2" name="nik" id="nik" placeholder="Masukan NIK" type="number" required />
                                 </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6 form-input mt-2">
                                     <label>
                                         Nama
                                     </label>
                                     <input class="form-control inputForm mt-2" name="nama" id="nama" placeholder="Masukan Nama" type="text" required />
                                 </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6 form-input mt-2">
                                     <label>
                                         Posisi
                                     </label>
                                     <input class="form-control inputForm mt-2" name="posisi" id="posisi" placeholder="Masukan Posisi" type="text" required />
                                 </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6 form-input mt-2">
                                     <label>
                                         Tanggal Penilaian
                                     </label>
                                     <input class="form-control inputForm mt-2" name="tglPenilaian" id="tglPenilaian" placeholder="Masukan Tanggal" type="date" required />
                                 </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6 form-input mt-2">
                                     <label>
                                         Status Kerja
                                     </label>
@@ -159,31 +158,31 @@
                                         </option>
                                     </select>
                                 </div>
-                                <div class="col-2 form-input mt-2">
+                                <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
                                         Responsibility (30%)
                                     </label>
                                     <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100)" type="number" required min="0" max="100" />
                                 </div>
-                                <div class="col-2 form-input mt-2">
+                                <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
                                         Teamwork (30%)
                                     </label>
                                     <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100)" type="number" required min="0" max="100" />
                                 </div>
-                                <div class="col-2 form-input mt-2">
+                                <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
                                         Management Time (40%)
                                     </label>
                                     <input min="0" max="100" class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100)" type="number" required min="0" max="100" />
                                 </div>
                             </div>
-                            <div class="tab mt-4">
-                                <div class="btn btn-primary" style="background-color:#40916C;width:10%;" data-bs-toggle="modal" data-bs-target="#modalSimpan">
+                            <div class="mt-4">
+                                <div class="btn btn-primary" style="background-color:#40916C;" data-bs-toggle="modal" data-bs-target="#modalSimpan">
                                     Simpan
                                 </div>
                                 <a href="performance.php" target="_self">
-                                    <div class="btn btn-primary" style="background-color:white;width:10%;border:2;border-color:#40916C;color:black;">
+                                    <div class="btn btn-primary" style="background-color:white;border:2;border-color:#40916C;color:black;">
                                         Batal
                                     </div>
                                 </a>
