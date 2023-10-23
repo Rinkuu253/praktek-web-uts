@@ -27,6 +27,11 @@ if ($total >= 80) {
 
 $sql = "UPDATE `performance` SET `nama` = '$nama', `status_kerja` = '$statusKerja', `position` = '$posisi', `tgl_penilaian` = '$tglPenilaian', `responsibility` = '$responsibility', `teamwork` = '$teamwork', `management_time` = '$management', `total` = '$total', `grade` = '$grade'";
 
+if ($foto) {
+    $file_extension = pathinfo($_FILES["inputFoto"]["name"], PATHINFO_EXTENSION);
+    $foto = $nik . "." . $file_extension;
+    $sql .= ", `foto` = '$foto'";
+}
 $sql .= "WHERE `performance`.`nik` = '$nik'";
 
 $result = mysqli_query($conn, $sql);

@@ -163,19 +163,19 @@
                                     <label>
                                         Responsibility (30%)
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100)" type="number" required />
+                                    <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100)" type="number" required min="0" max="100" />
                                 </div>
                                 <div class="col-2 form-input mt-2">
                                     <label>
                                         Teamwork (30%)
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100)" type="number" required />
+                                    <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100)" type="number" required min="0" max="100" />
                                 </div>
                                 <div class="col-2 form-input mt-2">
                                     <label>
                                         Management Time (40%)
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100)" type="number" required />
+                                    <input min="0" max="100" class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100)" type="number" required min="0" max="100" />
                                 </div>
                             </div>
                             <div class="tab mt-4">
@@ -283,6 +283,7 @@
             });
         });
     </script>
+
 </body>
 
 </html>
