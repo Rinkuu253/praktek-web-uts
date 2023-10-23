@@ -113,7 +113,7 @@ include "sqlConnect.php"
                                             <td align="center">
                                                 <a href="view_performance.php?nik=<?php echo $row['nik']; ?>"><button type="button" class="btn btn-info" style="width:75pxs">View</button></a>
                                                 <a href="edit_performance.php?nik=<?php echo $row['nik']; ?>"><button type="button" class="btn btn-info" style="width:75pxs">Edit</button></a>
-                                                <a href="delete_peformance.php?id=<?php echo $row['nik']; ?>" onclick="return hapus()"><button type="button" class="btn btn-danger" style="width:75px">Delete</button></a>
+                                                <a href="delete_peformance.php?nik=<?php echo $row['nik']; ?>" onclick="return hapus()"><button type="button" class="btn btn-danger" style="width:75px">Delete</button></a>
                                             </td>
                                         </tr>
                                 <?php
