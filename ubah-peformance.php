@@ -2,7 +2,6 @@
 include "sqlConnect.php";
 include "dataImport.php";
 
-$fotoOld = $_POST['fotoOld'];
 $foto = $_FILES["inputFoto"]["name"];
 $nik = trim($_POST['nik']);
 $nama = trim($_POST['nama']);
@@ -12,8 +11,9 @@ $statusKerja = trim($_POST['statusKerja']);
 $responsibility = trim($_POST['responsibility']);
 $teamwork = trim($_POST['teamwork']);
 $management = trim($_POST['management']);
+$photoAvaiable =
 
-$total = ($responsibility * 30 / 100) + ($teamwork * 30 / 100) + ($management * 40 / 100);
+    $total = ($responsibility * 30 / 100) + ($teamwork * 30 / 100) + ($management * 40 / 100);
 $grade = "D";
 
 if ($total >= 80) {
@@ -30,10 +30,6 @@ if ($total >= 80) {
 
 $sql = "UPDATE `performance` SET `nama` = '$nama', `status_kerja` = '$statusKerja', `position` = '$posisi', `tgl_penilaian` = '$tglPenilaian', `responsibility` = '$responsibility', `teamwork` = '$teamwork', `management_time` = '$management', `total` = '$total', `grade` = '$grade'";
 
-if ($foto) {
-    $sql .= ",`foto` = ' $foto'";
-}
-
 $sql .= "WHERE `performance`.`nik` = '$nik'";
 
 $result = mysqli_query($conn, $sql);
@@ -42,16 +38,11 @@ if ($result) {
     if (!$foto) {
         header("location:peformance.php");
     } else {
-        $remove = removeFile($fotoOld);
-        if ($remove) {
-            $upload = uploadImage($nik);
-            if ($upload) {
-                header("location:peformance.php");
-            } else {
-                echo "gagal aplod";
-            }
+        $upload = uploadImage($nik, $nama);
+        if ($upload) {
+            header("location:peformance.php");
         } else {
-            echo "gagal hapus";
+            echo "gagal aplod";
         }
     }
 } else {
