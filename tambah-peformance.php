@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Tambah Peforma</title>
 
     <style>
@@ -50,8 +51,40 @@
         }
     </style>
     <script>
-        function simpan() {
+        function simpan(event) {
+            event.preventDefault();
             return true;
+        }
+
+        function hapus() {
+
+            // Mengambil elemen-elemen input dengan id yang sesuai
+            var nikInput = document.getElementById('nik');
+            var namaInput = document.getElementById('nama');
+            var tglPenilaianInput = document.getElementById('tglPenilaian');
+            var posisiInput = document.getElementById('posisi');
+            var statusKerjaInput = document.getElementById('statusKerja');
+            var responsibilityInput = document.getElementById('responsibility');
+            var teamworkInput = document.getElementById('teamwork');
+            var managementInput = document.getElementById('management');
+            var inputFoto = document.getElementById('inputFoto');
+            // Mengatur nilai elemen-elemen input menjadi kosong
+            nikInput.value = '';
+            namaInput.value = '';
+            tglPenilaianInput.value = '';
+            posisiInput.value = '';
+            statusKerjaInput.value = '';
+            responsibilityInput.value = '';
+            teamworkInput.value = '';
+            managementInput.value = '';
+            inputFoto.value = '';
+
+            // Menghapus pratinjau foto
+            document.getElementById('previewFoto').setAttribute('src', 'images/defaultProfile.jpg');
+
+            // Mengembalikan nilai false agar form tidak disubmit setelah membersihkan input
+            return false;
+
         }
     </script>
 </head>
@@ -64,13 +97,22 @@
                 <form action="add-peformance.php" method="POST" enctype="multipart/form-data" onsubmit="return simpan()">
                     <div class="card">
                         <div class="card-body">
-                            <h3>Informasi dan Performa Karyawan</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h3>Informasi dan Performa Karyawan</h3>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end">
+                                    <div class="btn btn-danger" style="width:20%" data-bs-toggle="modal" data-bs-target="#modalClear">
+                                        Clear
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row mt-4">
                                 <div class="col-6 form-input mt-2">
-                                    <img src="images/defaultProfile.jpg" alt="No Image" id="previewFoto" class="img-fluid rounded" style="max-width: 100px; max-height: 100px">
+                                    <img src="images/defaultProfile.jpg" alt="No Image" id="previewFoto" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
 
                                     <div class="mt-3">
-                                        <input class="form-control inputForm" type="file" placeholder="Pilih Foto" id="inputFoto" name="inputFoto" accept="image/*">
+                                        <input class="form-control inputForm" type="file" placeholder="Pilih Foto" id="inputFoto" name="inputFoto" accept="image/*" required>
                                     </div>
 
                                 </div>
@@ -81,31 +123,31 @@
                                     <label>
                                         NIK
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="nik" id="nik" placeholder="Masukan NIK" type="number" />
+                                    <input class="form-control inputForm mt-2" name="nik" id="nik" placeholder="Masukan NIK" type="number" required />
                                 </div>
                                 <div class="col-6 form-input mt-2">
                                     <label>
                                         Nama
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="nama" id="nama" placeholder="Masukan Nama" type="text" />
-                                </div>
-                                <div class="col-6 form-input mt-2">
-                                    <label>
-                                        Tanggal Penilaian
-                                    </label>
-                                    <input class="form-control inputForm mt-2" name="tglPenilaian" id="tglPenilaian" placeholder="Masukan Tanggal" type="date" />
+                                    <input class="form-control inputForm mt-2" name="nama" id="nama" placeholder="Masukan Nama" type="text" required />
                                 </div>
                                 <div class="col-6 form-input mt-2">
                                     <label>
                                         Posisi
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="posisi" id="posisi" placeholder="Masukan Posisi" type="text" />
+                                    <input class="form-control inputForm mt-2" name="posisi" id="posisi" placeholder="Masukan Posisi" type="text" required />
+                                </div>
+                                <div class="col-6 form-input mt-2">
+                                    <label>
+                                        Tanggal Penilaian
+                                    </label>
+                                    <input class="form-control inputForm mt-2" name="tglPenilaian" id="tglPenilaian" placeholder="Masukan Tanggal" type="date" required />
                                 </div>
                                 <div class="col-6 form-input mt-2">
                                     <label>
                                         Status Kerja
                                     </label>
-                                    <select class="form-control inputForm mt-2" name="statusKerja" id="statusKerja">
+                                    <select class="form-control inputForm mt-2" name="statusKerja" id="statusKerja" required>
                                         <option value="" hidden>
                                             Pilih
                                         </option>
@@ -121,23 +163,23 @@
                                     <label>
                                         Responsibility (30%)
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100)" type="number" />
+                                    <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100)" type="number" required />
                                 </div>
                                 <div class="col-2 form-input mt-2">
                                     <label>
                                         Teamwork (30%)
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100)" type="number" />
+                                    <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100)" type="number" required />
                                 </div>
                                 <div class="col-2 form-input mt-2">
                                     <label>
                                         Management Time (40%)
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100)" type="number" />
+                                    <input class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100)" type="number" required />
                                 </div>
                             </div>
                             <div class="tab mt-4">
-                                <div class="btn btn-primary" style="background-color:#40916C;width:10%;" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <div class="btn btn-primary" style="background-color:#40916C;width:10%;" data-bs-toggle="modal" data-bs-target="#modalSimpan">
                                     Simpan
                                 </div>
                                 <a href="peformance.php" target="_self">
@@ -148,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="myModal">
+                    <div class="modal fade" id="modalSimpan">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
 
@@ -165,7 +207,31 @@
 
                                 <!-- Modal footer -->
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-success" style="width:20%;">Simpan</button>
+                                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal" style="width:20%;">Simpan</button>
+                                    <div class="btn btn-danger" data-bs-dismiss="modal">Tidak</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalClear">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Menghapus Field</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Apakah anda ingin menghapus data yang anda masukan?
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <div class="btn btn-success" style="width:20%;" data-bs-dismiss="modal" onclick="hapus()">Ya</div>
                                     <div class="btn btn-danger" data-bs-dismiss="modal">Tidak</div>
                                 </div>
 
