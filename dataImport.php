@@ -17,10 +17,10 @@ function uploadImage()
     return $uploadOk;
 }
 
-function removeFile($video_file)
+function removeFile($imgName)
 {
-    $target_dir = "video-database/";
-    $target_file = trim($target_dir . basename($video_file));
+    $target_dir = "databaseFoto/";
+    $target_file = trim($target_dir . basename($imgName));
     if (file_exists($target_file)) {
         unlink($target_file);
         return true;
