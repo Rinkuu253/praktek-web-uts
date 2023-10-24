@@ -1,22 +1,126 @@
+/* MAIN PALLETE */
+/* 5 main - #40916C
+1 surface - #BFDACE
+2 border - #9FC8B5
+7 hover - #2B6148
+9 pressed - #204836 */
+
 body {
     background-color: #EDFFED;
-    height: 100vh;
+    font-family: 'Inter', sans-serif;
 }
 
-.all {
-    margin: 0 100px 0 100px;
-}
 
 .navbar {
+    color: #2B6148 !important;
     background-color: #BFDACE80 !important;
-    .container-fluid {
-        margin: 0 100px 0 100px;
-    }
+    
     .navbar-brand {
         display: flex;
-        gap: 1.5rem;
-        :nth-child(1) {
-            width: 60px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        
+        a.active, a:hover {
+            font-weight: 600;   
+        }
+
+        div {
+            display: flex;
+            align-items: baseline;
+            align-content: center;
+            justify-content: center;
+            gap: 1rem;
+            p {
+                font-weight: 600;
+            }
+        }
+
+    }
+    
+}
+
+
+
+
+
+
+/* BREAKPOINT */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .all {
+        margin: 0 30px 0 30px;
+    }
+
+    .navbar {
+        .navbar-brand {
+            gap: 1rem;
+            :nth-child(1) {
+                width: 10vw;
+            }
+            :nth-child(2) {
+                width: 32vw;
+            }
+        }
+        
+        .container-fluid {
+            margin: 0 30px 0 30px;
         }
     }
 }
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 600px) {
+    .all {
+        margin: 0 100px 0 100px;
+    }
+
+    .navbar {
+        .navbar-brand {
+            gap: 1.5rem;
+            :nth-child(1) {
+                width: 60px;
+            }
+        }
+    
+        .container-fluid {
+            margin: 0 100px 0 100px;
+        }
+    }
+    
+    
+} 
+
+
+
+
+/* cheatsheet mediaquery */
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+  .example {background: red;}
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+  .example {background: green;}
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+  .example {background: blue;}
+}  */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  .example {background: orange;}
+}  */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}  */
