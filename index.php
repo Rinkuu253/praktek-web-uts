@@ -1,3 +1,7 @@
+<?php
+include "sqlConnect.php"
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -190,12 +194,88 @@
           </div>
         </div>
         
-        
+      <div class="table-respon">
+        <div class="titel">
+          <h2>Karyawan Tetap dengan Performance C dan D</h2>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>NIK</th>
+              <th>Name</th>
+              <th>Posisi</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <?php
+         $sSQL= "";
+         $sSQL=" select * from performance where status_kerja = 'Tetap' and (grade = 'C' OR grade = 'D')";
+         $result=mysqli_query($conn,$sSQL);
+         if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($result)) {
+       ?>  
+                <tr>
+                <td><?php echo $row['nik'];?></td>
+                <td><?php echo $row['nama'];?></td>
+                <td><?php echo $row['position'];?></td>
+                <td> 
+                  
+
+                </td>
+              </tr>
+      <?php
+            }
+          } 
+       ?> 
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="table-respon">
+          <div class="titel"> 
+            <h2>Karyawan Tidak Tetap dengan Performance C dan D</h2> 
+          </div>
+          <table class="table">
+          <thead>
+            <tr>
+              <th>NIK</th>
+              <th>Name</th>
+              <th>Posisi</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <?php
+         $sSQL= "";
+         $sSQL=" select * from performance where status_kerja = 'Tidak Tetap' and (grade = 'C' OR grade = 'D')";
+         $result=mysqli_query($conn,$sSQL);
+         if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($result)) {
+       ?>  
+                <tr>
+                <td><?php echo $row['nik'];?></td>
+                <td><?php echo $row['nama'];?></td>
+                <td><?php echo $row['position'];?></td>
+                <td> 
+                  
+
+                </td>
+              </tr>
+      <?php
+            }
+          } 
+       ?> 
+          </tbody>
+        </table>
+      </div>  
 
       
     </div>
     
-  
+
     <h1>fakkkk</h1>
 
     <script>
