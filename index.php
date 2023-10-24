@@ -16,6 +16,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <link rel="icon" type="image/x-icon" href="images/logo.ico">
+  
   <title>Healthy Food Dashboard : Menu</title>
 </head>
 
@@ -47,7 +49,7 @@
     <div class="all">
 
       <div class="welcome">
-        <img src="images/mascot.svg" alt="">
+        <img src="images/mascot.svg"  >
         <div class="text">
           <h1>Selamat datang kembali, Matthew~</h1>
           <p>Semoga kamu dalam keadaan sehat selalu, yuk cek laporan karyawan harini</p>
@@ -82,7 +84,7 @@
           <div class="card">
           <div class="card-body">
               <div class="atas">
-                <div class="ic"><i class="fa-solid fa-users fa-2xl"></i></div>
+                <div class="ic"><i class="fa-solid fa-user-group fa-2xl"></i></div>
                 <div class="isi">
                   <div>
                     <h1>25</h1>
@@ -99,7 +101,7 @@
           <div class="card">
           <div class="card-body">
               <div class="atas">
-                <div class="ic"><i class="fa-solid fa-users fa-2xl"></i></div>
+                <div class="ic"><i class="fa-solid fa-user fa-2xl"></i></div>
                 <div class="isi">
                   <div>
                     <h1>25</h1>
@@ -115,11 +117,87 @@
           </div>
         </div>
       </div>
-      <h1>fakkkk</h1>
+
+      <div class="performa-karyawan">
+        <div class="titel">
+          <h2>Performa Karyawan</h2>
+          <a href="">Lihat selengkapnya</a>
+        </div>  
+        
+        <div class="cards">
+          <div class="card">
+            <div class="card-body">
+              <div class="desc">
+                <p>Performa Karyawan Tetap</p>
+                <p>2023</p>
+              </div>
+
+              <div class="rates">
+                <div class="rate">
+                  <img src="images/emojiA.svg">
+                  <p>A</p>
+                  <h1>12</h1>
+                </div>
+                <div class="rate">
+                  <img src="images/emojiB.svg">
+                  <p>B</p>
+                  <h1>12</h1>
+                </div>
+                <div class="rate">
+                  <img src="images/emojiC.svg">
+                  <p>C</p>
+                  <h1>12</h1>
+                </div>
+                <div class="rate">
+                  <img src="images/emojiD.svg">
+                  <p>D</p>
+                  <h1>12</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <div class="desc">
+                <p>Performa Karyawan Tetap</p>
+                <p>2023</p>
+              </div>
+
+              <div class="rates">
+                <div class="rate">
+                  <img src="images/emojiA.svg">
+                  <p>A</p>
+                  <h1>12</h1>
+                </div>
+                <div class="rate">
+                  <img src="images/emojiB.svg">
+                  <p>B</p>
+                  <h1>12</h1>
+                </div>
+                <div class="rate">
+                  <img src="images/emojiC.svg">
+                  <p>C</p>
+                  <h1>12</h1>
+                </div>
+                <div class="rate">
+                  <img src="images/emojiD.svg">
+                  <p>D</p>
+                  <h1>12</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+
       
     </div>
     
   
+    <h1>fakkkk</h1>
+
     <script>
       const date = new Date();
 
