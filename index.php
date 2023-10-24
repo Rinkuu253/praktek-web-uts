@@ -47,7 +47,7 @@
         <div class="text">
           <h1>Selamat datang kembali, Matthew~</h1>
           <p>Semoga kamu dalam keadaan sehat selalu, yuk cek laporan karyawan harini</p>
-          <button type="button" class="btn btn-success btn-lg">Cek laporan keseluruhan</button>
+          <button type="button" class="btn btn-success btn-lg"><i class="fa-solid fa-angles-down"></i>     Cek laporan keseluruhan</button>
         </div>
       </div>
       <h1>fakkkk</h1>
