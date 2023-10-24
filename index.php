@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="all">
+    
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
@@ -26,10 +26,12 @@
           </div>
       </div>
       </nav>  
+    <div class="all">
+      <h1>Hello, world! fak</h1>
     </div>
     
   
-  <h1>Hello, world!</h1>
+  
 
   </body>
 </html>

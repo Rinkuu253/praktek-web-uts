@@ -1,10 +1,11 @@
 body {
     background-color: #EDFFED;
+    height: 100vh;
 }
 
-/* .all {
+.all {
     margin: 0 100px 0 100px;
-} */
+}
 
 .navbar {
     background-color: #BFDACE80 !important;
