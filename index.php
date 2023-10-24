@@ -43,13 +43,76 @@
           </div>
       </div>
       </nav>  
+
     <div class="all">
+
       <div class="welcome">
         <img src="images/mascot.svg" alt="">
         <div class="text">
           <h1>Selamat datang kembali, Matthew~</h1>
           <p>Semoga kamu dalam keadaan sehat selalu, yuk cek laporan karyawan harini</p>
           <button type="button" class="btn btn-success btn-lg"><i class="fa-solid fa-angles-down"></i>   Cek laporan keseluruhan</button>
+        </div>
+      </div>
+      
+      <div class="jumlah-karyawan">
+        <div class="titel">
+          <h2>Jumlah Karyawan</h2>
+          <a href="">Lihat selengkapnya</a>
+        </div>  
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-body">
+              <div class="atas">
+                <div class="ic"><i class="fa-solid fa-users fa-2xl"></i></div>
+                <div class="isi">
+                  <div>
+                    <h1>25</h1> 
+                    <p>orang</p>
+                  </div>  
+                  <p>Total Karyawan</p>
+                </div>
+              </div>
+              <div class="bawah">
+                <div class="stat">+3% dibanding bulan lalu</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+          <div class="card-body">
+              <div class="atas">
+                <div class="ic"><i class="fa-solid fa-users fa-2xl"></i></div>
+                <div class="isi">
+                  <div>
+                    <h1>25</h1>
+                    <p>orang</p>
+                  </div>  
+                  <p>Total Karyawan</p>
+                </div>
+              </div>
+              <div class="bawah">
+                <div class="stat">+3% dibanding bulan lalu</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+          <div class="card-body">
+              <div class="atas">
+                <div class="ic"><i class="fa-solid fa-users fa-2xl"></i></div>
+                <div class="isi">
+                  <div>
+                    <h1>25</h1>
+                    <p>orang</p>
+                  </div>  
+                  <p>Total Karyawan</p>
+                </div>
+              </div>
+              <div class="bawah">
+                <div class="stat">+3% dibanding bulan lalu</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <h1>fakkkk</h1>
