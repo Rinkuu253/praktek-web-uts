@@ -19,7 +19,7 @@
   </head>
   <body>
     
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
 
           <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
@@ -42,6 +42,14 @@
       </div>
       </nav>  
     <div class="all">
+      <div class="welcome">
+        <img src="images/mascot.svg" alt="">
+        <div class="text">
+          <h1>Selamat datang kembali, Matthew~</h1>
+          <p>Semoga kamu dalam keadaan sehat selalu, yuk cek laporan karyawan harini</p>
+          <button type="button" class="btn btn-success btn-lg">Cek laporan keseluruhan</button>
+        </div>
+      </div>
       <h1>fakkkk</h1>
       
     </div>

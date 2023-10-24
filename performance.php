@@ -57,7 +57,7 @@ include "sqlConnect.php"
 
 <body>
     
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
 
           <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
