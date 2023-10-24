@@ -21,47 +21,29 @@
 
 <body>
 
-  <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-      <div class="container-fluid">
-
-          <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-              <div>
-                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                <a class="nav-link" href="performance.php">Performance</a>
-              </div>
-              <div>
-                <i class="fa-regular fa-calendar"></i>
-                <p id="tgl">tanggal</p>
-              </div>
-          </div>
-          </div>
-      </div>
-      </nav>   -->
-
   <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div class="container-fluid">
+
       <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="row">
-          <div class="col-12 col-lg-6 active">
-            Home
+        <div class="navbar-nav">
+          <div>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link" href="performance.php">Performance</a>
           </div>
-          <div class="col-12 col-lg-6">
-            Performance
+          <div>
+            <i class="fa-regular fa-calendar"></i>
+            <p id="tgl">tanggal</p>
           </div>
         </div>
       </div>
     </div>
   </nav>
+
   <div class="all">
     <div class="welcome">
       <img src="images/mascot.svg" alt="">
