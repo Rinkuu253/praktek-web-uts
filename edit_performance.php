@@ -82,6 +82,41 @@ if ($result->num_rows > 0) {
             event.preventDefault();
             return true;
         }
+
+        function hapus() {
+            var nama = "<?php echo $nama; ?>";
+            var tglPenilaian = "<?php echo $tglPenilaian; ?>";
+            var posisi = "<?php echo $posisi; ?>";
+            var statusKerja = "<?php echo $statusKerja; ?>";
+            var responsibility = "<?php echo $responsibility; ?>";
+            var teamwork = "<?php echo $teamwork; ?>";
+            var management = "<?php echo $management; ?>";
+            var foto = "<?php echo $foto; ?>";
+            // Mengambil elemen-elemen input dengan id yang sesuai
+            var namaInput = document.getElementById('nama');
+            var tglPenilaianInput = document.getElementById('tglPenilaian');
+            var posisiInput = document.getElementById('posisi');
+            var statusKerjaInput = document.getElementById('statusKerja');
+            var responsibilityInput = document.getElementById('responsibility');
+            var teamworkInput = document.getElementById('teamwork');
+            var managementInput = document.getElementById('management');
+            var inputFoto = document.getElementById('inputFoto');
+            // Mengatur nilai elemen-elemen input menjadi kosong
+            namaInput.value = nama;
+            tglPenilaianInput.value = tglPenilaian;
+            posisiInput.value = posisi;
+            statusKerjaInput.value = statusKerja;
+            responsibilityInput.value = responsibility;
+            teamworkInput.value = teamwork;
+            managementInput.value = management;
+
+            // Menghapus pratinjau foto
+            document.getElementById('previewFoto').setAttribute('src', 'databaseFoto/' + foto);
+
+            // Mengembalikan nilai false agar form tidak disubmit setelah membersihkan input
+            return false;
+
+        }
     </script>
 </head>
 
@@ -93,44 +128,51 @@ if ($result->num_rows > 0) {
                 <form action="ubah-performance.php" method="POST" enctype="multipart/form-data" onsubmit="return simpan()">
                     <div class="card">
                         <div class="card-body">
-                            <h3>Informasi dan Performa Karyawan</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h3>Informasi dan Performa Karyawan</h3>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex justify-content-end">
+                                        <div class="btn btn-danger" style="width:100%; max-width:150px" data-bs-toggle="modal" data-bs-target="#modalClear">
+                                            Clear
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row mt-4">
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 form-input mt-2">
                                     <img src="dataBaseFoto/<?php echo ($foto) ?>" alt="No Image" id="previewFoto" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-                                    <input type="hidden" id="fotoOld" name="fotoOld" value="<?php echo $fotoOld; ?>">
                                     <div class="mt-3">
-                                        <input class="form-control inputForm" type="file" placeholder="Pilih Foto" id="inputFoto" name="inputFoto" accept="image/*" value="<?php echo $foto; ?>">
+                                        <input class="form-control inputForm" type="file" placeholder="Pilih Foto" id="inputFoto" name="inputFoto" accept="image/*" value="<?php echo $foto; ?>" style="max-width:50%">
                                     </div>
 
                                 </div>
-                                <div class=" col-6 form-input mt-2">
-
-                                </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6  form-input mt-2">
                                     <label>
                                         NIK
                                     </label>
                                     <input class="form-control inputForm mt-2" name="nik" id="nik" placeholder="Masukan NIK" type="number" readonly value="<?php echo ($nik) ?>" />
                                 </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6  form-input mt-2">
                                     <label>
                                         Nama
                                     </label>
                                     <input class="form-control inputForm mt-2" name="nama" id="nama" placeholder="Masukan Nama" type="text" required value="<?php echo ($nama) ?>" />
                                 </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6  form-input mt-2">
                                     <label>
                                         Posisi
                                     </label>
                                     <input class="form-control inputForm mt-2" name="posisi" id="posisi" placeholder="Masukan Posisi" type="text" required value="<?php echo ($posisi) ?>" />
                                 </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6  form-input mt-2">
                                     <label>
                                         Tanggal Penilaian
                                     </label>
                                     <input class="form-control inputForm mt-2" name="tglPenilaian" id="tglPenilaian" placeholder="Masukan Tanggal" type="date" required value="<?php echo ($tglPenilaian) ?>" />
                                 </div>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 col-sm-6  form-input mt-2">
                                     <label>
                                         Status Kerja
                                     </label>
@@ -146,31 +188,31 @@ if ($result->num_rows > 0) {
                                         </option>
                                     </select>
                                 </div>
-                                <div class="col-2 form-input mt-2">
+                                <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
                                         Responsibility (30%)
                                     </label>
                                     <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100)" type="number" required value="<?php echo ($responsibility) ?>" />
                                 </div>
-                                <div class="col-2 form-input mt-2">
+                                <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
                                         Teamwork (30%)
                                     </label>
                                     <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100)" type="number" required value="<?php echo ($teamwork) ?>" />
                                 </div>
-                                <div class="col-2 form-input mt-2">
+                                <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
                                         Management Time (40%)
                                     </label>
                                     <input class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100)" type="number" required value="<?php echo ($management) ?>" />
                                 </div>
                             </div>
-                            <div class="tab mt-4">
-                                <div class="btn btn-primary" style="background-color:#40916C;width:10%;" data-bs-toggle="modal" data-bs-target="#modalSimpan">
+                            <div class="mt-4">
+                                <div class="btn btn-primary" style="background-color:#40916C;" data-bs-toggle="modal" data-bs-target="#modalSimpan">
                                     Simpan
                                 </div>
                                 <a href="performance.php" target="_self">
-                                    <div class="btn btn-primary" style="background-color:white;width:10%;border:2;border-color:#40916C;color:black;">
+                                    <div class="btn btn-primary" style="background-color:white;border:2;border-color:#40916C;color:black;">
                                         Batal
                                     </div>
                                 </a>
@@ -195,6 +237,30 @@ if ($result->num_rows > 0) {
                                 <!-- Modal footer -->
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success" data-bs-dismiss="modal" style="width:20%;">Simpan</button>
+                                    <div class="btn btn-danger" data-bs-dismiss="modal">Tidak</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalClear">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Clear Field</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Apakah anda ingin mengembalikan data yang anda Ubah?
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <div class="btn btn-success" style="width:20%;" data-bs-dismiss="modal" onclick="hapus()">Ya</div>
                                     <div class="btn btn-danger" data-bs-dismiss="modal">Tidak</div>
                                 </div>
 

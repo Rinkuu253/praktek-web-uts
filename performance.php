@@ -36,11 +36,9 @@ include "sqlConnect.php"
             color: #262626;
         }
 
-        .btn-fungsi {
-            height: 100%;
-            width: 100%;
-            border-width: 2px;
-            border-color: #40916C;
+        .btn-top {
+            margin-left: 1em;
+            margin-right: 1em;
         }
     </style>
     <title>Performance</title>
@@ -53,16 +51,20 @@ include "sqlConnect.php"
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <h2 class="table-title mt-1">Performa Karyawan</h2>
+                        <div class="col-12 col-lg-6">
+                            <div class="card-title">
+                                <h2 class="table-title mt-1">Performa Karyawan</h2>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <input type="text" class="form-control mb-3" placeholder="Cari karyawan..." />
-                        </div>
-                        <div class="col-md-2">
-                            <a href="tambah-performance.php" class="btn btn-primary btn-fungsi" style="background-color:white;color:black;border:1;border-color:#40916C">
-                                Tambah Baru +
-                            </a>
+                        <div class="col-12 col-lg-6 d-flex justify-content-end">
+                            <div class="col-12 col-xl-9 col-lg-6 col-sm-12 btn-top">
+                                <input type="text" class="form-control" placeholder="Cari karyawan..." />
+                            </div>
+                            <div class="col-12 col-xl-3 col-lg-6 col-sm-12 btn-top">
+                                <a href="tambah-performance.php" class="btn btn-primary" style="background-color:white;color:black;border:1;border-color:#40916C;width:100%">
+                                    Tambah Baru +
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
