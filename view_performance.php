@@ -97,38 +97,37 @@ if ($result->num_rows > 0) {
             <div class="content-fluid">
                 <h1 class="PageTitle mt-3">Rincian Performa Karyawan</h1>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 mb-3">
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="mb-4">Informasi Karyawan</h3>
-                                <div class="col-6 form-input mt-2">
+                                <div class="col-12 form-input mt-2">
                                     <img src="databaseFoto/<?php echo ($foto) ?>" alt="No Image" id="previewFoto" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
                                 </div>
-                                <div class="col-6 form-input mt-2">
-                                </div>
-                                <div class="col-6 form-input mt-2">
-                                    <label class="view-title">
-                                        NIK
-                                    </label>
-                                    <br />
-                                    <label class="view-value"><?php echo ($nik) ?></label>
-                                </div>
-                                <div class="col-6 form-input mt-2">
-                                    <label class="view-title">
-                                        Nama
-                                    </label>
-                                    <br />
-                                    <label class="view-value"><?php echo ($nama) ?></label>
+                                <div class="row">
+                                    <div class="col-6 col-md-12 form-input mt-2">
+                                        <label class="view-title">
+                                            NIK
+                                        </label>
+                                        <br />
+                                        <label class="view-value"><?php echo ($nik) ?></label>
+                                    </div>
+                                    <div class="col-6 col-md-12 form-input mt-2">
+                                        <label class="view-title">
+                                            Nama
+                                        </label>
+                                        <br />
+                                        <label class="view-value"><?php echo ($nama) ?></label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                         <div class="card">
                             <div class="card-body">
                                 <h3>Informasi Performa</h3>
                                 <div class="row mt-4">
-
                                     <div class="col-6 form-input mt-2">
                                         <label class="view-title">
                                             Posisi
@@ -136,37 +135,35 @@ if ($result->num_rows > 0) {
                                         <br />
                                         <label class="view-value"><?php echo ($posisi) ?></label>
                                     </div>
-                                    <div class="col-6 form-input mt-2">
+                                    <div class="col-12 col-sm-6 form-input mt-2">
                                         <label class="view-title">
                                             Tanggal Penilaian
                                         </label>
                                         <br />
                                         <label class="view-value"><?php echo ($tglPenilaian) ?></label>
                                     </div>
-                                    <div class="col-6 form-input mt-2">
+                                    <div class="col-12 form-input mt-2">
                                         <label class="view-title">
                                             Status Kerja
                                         </label>
                                         <br />
                                         <label class="view-value"><?php echo ($statusKerja) ?></label>
                                     </div>
-                                    <div class="col-6 form-input mt-2">
-                                    </div>
-                                    <div class="col-4 form-input mt-2">
+                                    <div class="col-12 col-xxl-4 col-sm-6 form-input mt-2">
                                         <label class="view-title">
                                             Responsibility
                                         </label>
                                         <br />
                                         <label><?php echo ($responsibility) ?> / 100.00</label>
                                     </div>
-                                    <div class="col-4 form-input mt-2">
+                                    <div class="col-12 col-xxl-4 col-sm-6 form-input mt-2">
                                         <label class="view-title">
                                             Teamwork
                                         </label>
                                         <br />
                                         <label class="view-value"><?php echo ($teamwork) ?> / 100.00</label>
                                     </div>
-                                    <div class="col-4 form-input mt-2">
+                                    <div class="col-12 col-xxl-4 col-sm-6 form-input mt-2">
                                         <label class="view-title">
                                             Management Time
                                         </label>
@@ -188,12 +185,12 @@ if ($result->num_rows > 0) {
                                         <label class="view-value"><?php echo ($grade) ?></label>
                                     </div>
                                 </div>
-                                <div class="tab mt-4">
+                                <div class="mt-4">
                                     <a href="edit_performance.php?nik=<?php echo ($nik) ?>" target="_self">
-                                        <div class="btn btn-info" style="background-color:#40916C;width:20%;color:white">Edit</div>
+                                        <div class="btn btn-info" style="background-color:#40916C;max-width:250px;color:white">Edit</div>
                                     </a>
                                     <a href="performance.php" target="_self">
-                                        <div class="btn btn-primary" style="background-color:white;width:20%;border:2;border-color:#40916C;color:black;">
+                                        <div class="btn btn-primary" style="background-color:white;max-width:250px;border:2;border-color:#40916C;color:black;">
                                             Kembali
                                         </div>
                                     </a>
