@@ -174,22 +174,26 @@ include "sqlConnect.php"
 
             <div class="rates">
               <div class="rate">
-                <img src="images/emojiA.svg">
+                <img src="images/emojiA.svg" class="ori">
+                <img src="images/emojiAC.svg" class="hov">
                 <p>A</p>
                 <h1>12</h1>
               </div>
               <div class="rate">
-                <img src="images/emojiB.svg">
+                <img src="images/emojiB.svg" class="ori">
+                <img src="images/emojiBC.svg" class="hov">
                 <p>B</p>
                 <h1>12</h1>
               </div>
               <div class="rate">
-                <img src="images/emojiC.svg">
+                <img src="images/emojiC.svg" class="ori">
+                <img src="images/emojiCC.svg" class="hov">
                 <p>C</p>
                 <h1>12</h1>
               </div>
               <div class="rate">
-                <img src="images/emojiD.svg">
+                <img src="images/emojiD.svg" class="ori">
+                <img src="images/emojiDC.svg" class="hov">
                 <p>D</p>
                 <h1>12</h1>
               </div>
@@ -294,7 +298,7 @@ include "sqlConnect.php"
 
 
     </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
