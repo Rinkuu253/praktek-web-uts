@@ -127,6 +127,11 @@ h1 {
                 .bawah {
                     border-top: .5px solid #8D8D8D;
                     padding-top: 16px;
+                    display: flex;
+                    column-gap: 8px;
+                    .stat {
+                        color: #2B6148;
+                    }
                 }
             }
         }

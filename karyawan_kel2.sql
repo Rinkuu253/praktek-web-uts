@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2023 at 08:34 AM
+-- Generation Time: Oct 25, 2023 at 03:26 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -46,31 +46,31 @@ CREATE TABLE `performance` (
 --
 
 INSERT INTO `performance` (`nik`, `foto`, `nama`, `status_kerja`, `position`, `tgl_penilaian`, `responsibility`, `teamwork`, `management_time`, `total`, `grade`) VALUES
-(20001, '', 'Irish bella', 'Tetap', 'Manager', '2013-10-09', 5.00, 5.00, 10.00, 2.00, '2'),
+(20001, '', 'Irish bella', 'Tetap', 'Manager', '2013-10-09', 5.00, 5.00, 10.00, 2.00, 'C'),
 (20002, '', 'John cena', 'Tetap', 'HRD', '2010-10-04', 7.00, 8.00, 8.00, 12.00, 'A'),
 (20004, '', 'Nia rahmadani', 'Tetap', 'Staff', '2023-10-09', 7.00, 7.00, 8.00, 22.00, 'A'),
 (20005, '', 'Raffi ahmad', 'Tetap', 'Staff', '2023-10-23', 7.00, 7.00, 10.00, 24.00, 'A'),
 (20006, '', 'Yurino', 'Tetap', 'Staff', '2023-10-18', 6.00, 8.00, 7.00, 21.00, 'A'),
-(20007, '', 'Wan', 'Tetap', 'digital ma', '2023-10-11', 8.00, 5.00, 7.00, 20.00, 'A'),
+(20007, '', 'Wan', 'Tetap', 'Marketing', '2023-10-11', 8.00, 5.00, 7.00, 20.00, 'A'),
 (20008, '', 'Bruce lee', 'Tetap', 'IT support', '2023-10-23', 7.00, 5.00, 10.00, 22.00, 'A'),
-(20009, '', 'Eko Ju', 'Tetap', 'digital ma', '2023-10-17', 5.00, 6.00, 8.00, 19.00, 'B'),
+(20009, '', 'Eko Ju', 'Tetap', 'Marketing', '2023-10-17', 5.00, 6.00, 8.00, 19.00, 'B'),
 (20010, '', 'Ahmad dhani', 'Tetap', 'Staff', '2023-10-18', 6.00, 5.00, 5.00, 16.00, 'B'),
 (20011, '', 'Catheezz', 'Tetap', 'Staff', '2023-10-11', 5.00, 5.00, 7.00, 17.00, 'B'),
 (20012, '', 'Andre taulany', 'Tetap', 'IT support', '2023-10-23', 7.00, 6.00, 8.00, 21.00, 'B'),
 (20013, '', 'Rekt', 'Tetap', 'IT support', '2023-10-11', 5.00, 5.00, 5.00, 15.00, 'C'),
-(20014, '', 'Uus', 'Tetap', 'digital ma', '2023-10-03', 6.00, 4.00, 7.00, 17.00, 'C'),
-(20015, '', 'Luna maya', 'Tetap', 'digital ma', '2023-10-03', 6.00, 4.00, 4.00, 15.00, 'C'),
-(20016, '', 'Sule', 'Tetap', 'Staff', '2023-10-10', 7.00, 5.00, 10.00, 22.00, 'C'),
-(20017, '', 'Lolox', 'Tetap', 'staff', '2023-10-18', 7.00, 7.00, 7.00, 21.00, 'A'),
-(20018, '', 'Rizky febian', 'Tetap', 'staff', '2023-10-12', 8.00, 8.00, 8.00, 24.00, 'B'),
-(20019, '', 'Pras teguh', 'Tetap', 'Manager', '2023-10-14', 4.00, 4.00, 4.00, 12.00, 'A'),
-(20020, '', 'Bintang', 'Tetap', 'Staff', '2023-10-19', 3.00, 3.00, 3.00, 9.00, 'A'),
-(20021, '', 'Raditya dika', 'Tetap', 'Manager', '2023-10-20', 5.00, 5.00, 5.00, 15.00, 'B'),
-(20022, '', 'Cak lontong', '', 'Staff', '2023-10-10', 9.00, 9.00, 9.00, 27.00, 'A'),
-(20023, '', 'Dzawin', 'Tetap', 'Manager', '2023-10-27', 10.00, 10.00, 10.00, 30.00, 'B'),
-(20024, '', 'Indro warkop', 'Tetap', 'Staff', '2023-10-31', 12.00, 12.00, 12.00, 36.00, 'A'),
-(20025, '', 'Mongol', 'Tetap', 'Manager', '2023-10-30', 14.00, 14.00, 14.00, 42.00, 'B'),
-(20026, '', 'Kemal palevi', 'Tetap', 'Staff', '2023-10-09', 15.00, 15.00, 15.00, 45.00, 'A');
+(20014, '', 'Uus', 'Tetap', 'Marketing', '2023-10-03', 6.00, 4.00, 7.00, 17.00, 'C'),
+(20015, '', 'Luna maya', 'Tetap', 'Marketing', '2023-10-03', 6.00, 4.00, 4.00, 15.00, 'C'),
+(20016, '', 'Sule', 'Tidak Tetap', 'Staff', '2023-10-10', 7.00, 5.00, 10.00, 22.00, 'C'),
+(20017, '', 'Lolox', 'Tidak Tetap', 'Staff', '2023-10-18', 7.00, 7.00, 7.00, 21.00, 'A'),
+(20018, '', 'Rizky febian', 'Tidak Tetap', 'Staff', '2023-10-12', 8.00, 8.00, 8.00, 24.00, 'B'),
+(20019, '', 'Pras teguh', 'Tidak Tetap', 'Manager', '2023-10-14', 4.00, 4.00, 4.00, 12.00, 'A'),
+(20020, '', 'Bintang', 'Tidak Tetap', 'Staff', '2023-10-19', 3.00, 3.00, 3.00, 9.00, 'A'),
+(20021, '', 'Raditya dika', 'Tidak Tetap', 'Manager', '2023-10-20', 5.00, 5.00, 5.00, 15.00, 'B'),
+(20022, '', 'Cak lontong', 'Tidak Tetap', 'Staff', '2023-10-10', 9.00, 9.00, 9.00, 27.00, 'A'),
+(20023, '', 'Dzawin', 'Tidak Tetap', 'Manager', '2023-10-27', 10.00, 10.00, 10.00, 30.00, 'B'),
+(20024, '', 'Indro warkop', 'Tidak Tetap', 'Staff', '2023-10-31', 12.00, 12.00, 12.00, 36.00, 'A'),
+(20025, '', 'Mongol', 'Tidak Tetap', 'Manager', '2023-10-30', 14.00, 14.00, 14.00, 42.00, 'B'),
+(20026, '', 'Kemal palevi', 'Tidak Tetap', 'Staff', '2023-10-09', 15.00, 15.00, 15.00, 45.00, 'A');
 
 --
 -- Indexes for dumped tables

@@ -89,7 +89,7 @@ include "sqlConnect.php"
               </div>
             </div>
             <div class="bawah">
-              <div class="stat">+3% dibanding bulan lalu</div>
+              <div class="stat">+3%</div>dibanding bulan lalu
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ include "sqlConnect.php"
               </div>
             </div>
             <div class="bawah">
-              <div class="stat">+3% dibanding bulan lalu</div>
+              <div class="stat">+3%</div>dibanding bulan lalu
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@ include "sqlConnect.php"
               </div>
             </div>
             <div class="bawah">
-              <div class="stat">+3% dibanding bulan lalu</div>
+              <div class="stat">+3%</div>dibanding bulan lalu
             </div>
           </div>
         </div>
@@ -276,6 +276,7 @@ include "sqlConnect.php"
               ?>
                   <tr>
                     <td>
+                      <!-- ini gajadi w ubah, klo mw pke db jandi ubah aja -->
                       <img class="img-fluid rounded-circle" src="
                   <?php if ($row['foto']) {
                     $filePath = "databaseFoto/" . $row['foto'];
