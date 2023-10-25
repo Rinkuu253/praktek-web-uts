@@ -179,6 +179,7 @@ if ($result->num_rows > 0) {
                                         <br />
                                         <label class="view-value"><?php echo ($statusKerja) ?></label>
                                     </div>
+                                    <hr style="margin-top: 32px;">
                                     <div class="col-12 col-xxl-4 col-sm-6 form-input mt-2">
                                         <label class="view-title">
                                             Responsibility
@@ -200,14 +201,15 @@ if ($result->num_rows > 0) {
                                         <br />
                                         <label class="view-value"><?php echo ($management) ?> / 100.00</label>
                                     </div>
-                                    <div class="col-6 form-input mt-2">
+                                    <hr style="margin-top: 32px;">
+                                    <div class="col-8 form-input mt-2">
                                         <label class="view-title">
                                             Total
                                         </label>
                                         <br />
                                         <label class="view-value"><?php echo ($total) ?></label>
                                     </div>
-                                    <div class="col-6 form-input mt-2">
+                                    <div class="col-4 form-input mt-2">
                                         <label class="view-title">
                                             Grade
                                         </label>
