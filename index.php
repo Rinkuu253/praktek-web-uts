@@ -73,8 +73,16 @@ include "sqlConnect.php"
             <div class="atas">
               <div class="ic"><i class="fa-solid fa-users fa-2xl"></i></div>
               <div class="isi">
+              <?php
+                  $sSQL = "SELECT COUNT(*) FROM performance ";
+                  $result = mysqli_query($conn, $sSQL);
+                  if ($result) {
+                    $row = mysqli_fetch_row($result);
+                    $totalSeluruh = $row[0];
+                  }
+                ?>
                 <div>
-                  <h1>25</h1>
+                  <h1><?php echo $totalSeluruh; ?></h1>
                   <p>orang</p>
                 </div>
                 <p>Seluruh Karyawan</p>
@@ -90,8 +98,16 @@ include "sqlConnect.php"
             <div class="atas">
               <div class="ic"><i class="fa-solid fa-user-group fa-2xl"></i></div>
               <div class="isi">
+              <?php
+                  $sSQL = "SELECT COUNT(*) FROM performance WHERE status_kerja = 'Tetap' ";
+                  $result = mysqli_query($conn, $sSQL);
+                  if ($result) {
+                    $row = mysqli_fetch_row($result);
+                    $totalTetap = $row[0];
+                  }
+                ?>
                 <div>
-                  <h1>25</h1>
+                  <h1><?php echo $totalTetap; ?></h1>
                   <p>orang</p>
                 </div>
                 <p>Karyawan Tetap</p>
@@ -107,8 +123,16 @@ include "sqlConnect.php"
             <div class="atas">
               <div class="ic"><i class="fa-solid fa-user fa-2xl"></i></div>
               <div class="isi">
+                <?php
+                  $sSQL = "SELECT COUNT(*) FROM performance WHERE status_kerja = 'Tidak Tetap' ";
+                  $result = mysqli_query($conn, $sSQL);
+                  if ($result) {
+                    $row = mysqli_fetch_row($result);
+                    $totalTidakTetap = $row[0];
+                  }
+                ?>
                 <div>
-                  <h1>25</h1>
+                  <h1><?php echo $totalTidakTetap; ?></h1>
                   <p>orang</p>
                 </div>
                 <p>Karyawan Tidak Tetap</p>
