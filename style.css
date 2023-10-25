@@ -171,6 +171,18 @@ h1 {
                     place-items: center;
                     row-gap: .7rem;
                 }
+                .rate .hov {
+                    position: absolute;
+                    opacity: 0;
+                    transition: opacity .5s;
+                    transition-timing-function: ease-in-out;
+                }
+                .rate:hover .hov{
+                    opacity: 1;
+                }
+                .rate:hover .ori {
+                    opacity: 0;
+                }
             }
         }
     }

@@ -52,6 +52,7 @@ include "sqlConnect.php"
         }
     </style>
 
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
     <title>Healthy Food Dashboard : Performance</title>
 </head>
 
