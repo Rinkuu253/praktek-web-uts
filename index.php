@@ -254,7 +254,12 @@ include "sqlConnect.php"
                     <td>
                       <img class="img-fluid rounded-circle" src="
                   <?php if ($row['foto']) {
-                    echo "databaseFoto/" . $row['foto'];
+                    $filePath = "databaseFoto/" . $row['foto'];
+                    if (file_exists($filePath)) {
+                      echo $filePath;
+                    } else {
+                      echo "images/defaultProfile.jpg";
+                    }
                   } else {
                     echo "images/defaultProfile.jpg";
                   } ?>" style="width:50px;height:50px;">
@@ -306,7 +311,12 @@ include "sqlConnect.php"
                     <td>
                       <img class="img-fluid rounded-circle" src="
                   <?php if ($row['foto']) {
-                    echo "databaseFoto/" . $row['foto'];
+                    $filePath = "databaseFoto/" . $row['foto'];
+                    if (file_exists($filePath)) {
+                      echo $filePath;
+                    } else {
+                      echo "images/defaultProfile.jpg";
+                    }
                   } else {
                     echo "images/defaultProfile.jpg";
                   } ?>" style="width:50px;height:50px;">
