@@ -232,7 +232,7 @@ include "sqlConnect.php"
             </div>
           </div>
         </div>
-        <div class="table-responsive p-3">
+        <div class="table-responsive p-3" >
           <table class="table table-striped">
             <thead>
               <tr>
@@ -265,8 +265,8 @@ include "sqlConnect.php"
                   } ?>" style="width:50px;height:50px;">
                       &nbsp;<?php echo $row['nik']; ?>
                     </td>
-                    <td><?php echo $row['nama']; ?></td>
-                    <td><?php echo $row['position']; ?></td>
+                    <td style="vertical-align: middle; "><?php echo $row['nama']; ?></td>
+                    <td style="vertical-align: middle; "><?php echo $row['position']; ?></td>
                     <td>
 
 
@@ -289,8 +289,8 @@ include "sqlConnect.php"
             </div>
           </div>
         </div>
-        <div class="table-responsive p-3">
-          <table class="table table-striped">
+        <div class="table-responsive p-3" >
+          <table class="table table-striped" >
             <thead>
               <tr>
                 <th>NIK</th>
@@ -308,7 +308,7 @@ include "sqlConnect.php"
                 while ($row = mysqli_fetch_assoc($result)) {
               ?>
                   <tr>
-                    <td>
+                    <td >
                       <img class="img-fluid rounded-circle" src="
                   <?php if ($row['foto']) {
                     $filePath = "databaseFoto/" . $row['foto'];
@@ -322,8 +322,8 @@ include "sqlConnect.php"
                   } ?>" style="width:50px;height:50px;">
                       &nbsp;<?php echo $row['nik']; ?>
                     </td>
-                    <td><?php echo $row['nama']; ?></td>
-                    <td><?php echo $row['position']; ?></td>
+                    <td style="vertical-align: middle; "><?php echo $row['nama']; ?></td>
+                    <td style="vertical-align: middle; "><?php echo $row['position']; ?></td>
                     <td>
 
 
