@@ -33,9 +33,15 @@ if ($result->num_rows > 0) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>View Performa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <title>Lihat Performance</title>
 
     <style>
+        .navbar-nav > div > a {
+            display: none;
+        }
+
         .container {
             padding: 2rem;
         }
@@ -92,6 +98,30 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
+     
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <div>
+            <a class="nav-link active" aria-current="page" href="index.php" >Home</a>
+            <a class="nav-link" href="performance.php">Performance</a>
+          </div>
+          <div>
+            <i class="fa-regular fa-calendar"></i>
+            <p id="tgl">tanggal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
     <div class="container">
         <div class="content-body">
             <div class="content-fluid">
@@ -218,16 +248,7 @@ if ($result->num_rows > 0) {
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('previewFoto').addEventListener('click', function() {
-            const modalPreviewFoto = document.getElementById('modalPreviewFoto');
-            const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
-            // Mengatur pratinjau di dalam modal sesuai dengan gambar pratinjau yang terlihat
-            modalPreviewFoto.setAttribute('src', document.getElementById('previewFoto').getAttribute('src'));
-            // Menampilkan modal
-            previewModal.show();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

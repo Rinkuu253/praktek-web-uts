@@ -77,7 +77,7 @@ include "sqlConnect.php"
                   <h1>25</h1>
                   <p>orang</p>
                 </div>
-                <p>Total Karyawan</p>
+                <p>Seluruh Karyawan</p>
               </div>
             </div>
             <div class="bawah">
@@ -94,7 +94,7 @@ include "sqlConnect.php"
                   <h1>25</h1>
                   <p>orang</p>
                 </div>
-                <p>Total Karyawan</p>
+                <p>Karyawan Tetap</p>
               </div>
             </div>
             <div class="bawah">
@@ -111,7 +111,7 @@ include "sqlConnect.php"
                   <h1>25</h1>
                   <p>orang</p>
                 </div>
-                <p>Total Karyawan</p>
+                <p>Karyawan Tidak Tetap</p>
               </div>
             </div>
             <div class="bawah">
@@ -168,7 +168,7 @@ include "sqlConnect.php"
         <div class="card">
           <div class="card-body">
             <div class="desc">
-              <p>Performa Karyawan Tetap</p>
+              <p>Performa Karyawan Tidak Tetap</p>
               <p>2023</p>
             </div>
 
@@ -290,22 +290,11 @@ include "sqlConnect.php"
             ?>
           </tbody>
         </table>
-              
       </div>
 
 
     </div>
-    <script>
-      const date = new Date();
-
-      let day = date.getDate();
-      let month = date.getMonth() + 1;
-      let year = date.getFullYear();
-
-      let currentDate = `${day}-${month}-${year}`;
-      document.getElementById("tgl").innerHTML = currentDate;
-    </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>

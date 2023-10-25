@@ -84,19 +84,15 @@ h1 {
     }   
 
 
+
 .jumlah-karyawan {
     .cards {
         display: grid;
 
-        .card {
-            border-radius: 24px;
-            border: none;
-            
             .card-body {
                 display: flex;
                 flex-direction: column;
                 row-gap: 1rem;
-                padding: 40px;
 
                 .atas {
                     display: flex;
@@ -134,7 +130,6 @@ h1 {
                 }
             }
         }
-    }
 }
 
 
@@ -144,17 +139,12 @@ h1 {
     .cards {
         display: grid;
 
-    }
-
-    .card {
-        border-radius: 24px;
-        border: none;
-        
+    }        
         .card-body {
             display: flex;
             flex-direction: column;
             row-gap: 1rem;
-            padding: 40px;
+            
 
             .desc {
                 display: flex;
@@ -185,9 +175,15 @@ h1 {
                 }
             }
         }
-    }
-
 }
+
+
+.card {
+    border-radius: 24px;
+    border: none;
+    padding: 40px;
+}
+
 
 
 

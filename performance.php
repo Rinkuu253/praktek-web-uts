@@ -93,12 +93,12 @@ include "sqlConnect.php"
                             </div>
                         </div>
                         <div class="col-12 col-lg-6 d-flex justify-content-end">
-                            <div class="col-12 col-xl-9 col-lg-6 col-sm-12 btn-top">
+                            <div class="col-12 col-xl-8 col-lg-6 col-sm-12 btn-top">
                                 <input type="text" class="form-control" placeholder="Cari karyawan..." />
                             </div>
-                            <div class="col-12 col-xl-3 col-lg-6 col-sm-12 btn-top">
+                            <div class="col-12 col-xl-4 col-lg-6 col-sm-12 btn-top">
                                 <a href="tambah-performance.php" class="btn btn-primary" style="background-color:white;color:black;border:1;border-color:#40916C;width:100%">
-                                    Tambah Baru +
+                                + Tambah Data
                                 </a>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ include "sqlConnect.php"
                                         <td><?php echo $row["grade"] ?></td>
                                         <td align="center">
                                             <a href="view_performance.php?nik=<?php echo $row['nik']; ?>" class="btn btn-info btn-sm">View</a>
-                                            <a href="edit_performance.php?nik=<?php echo $row['nik']; ?>" class="btn btn-info btn-sm">Edit</a>
+                                            <a href="edit_performance.php?nik=<?php echo $row['nik']; ?>" class="btn btn-warning btn-sm">Edit</a>
                                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapus">Delete</button>
                                             <div class="modal fade" id="modalHapus">
                                                 <div class="modal-dialog modal-dialog-centered">
@@ -178,16 +178,7 @@ include "sqlConnect.php"
         </div>
     </div>
 
-    <script>
-      const date = new Date();
-
-      let day = date.getDate();
-      let month = date.getMonth() + 1;
-      let year = date.getFullYear();
-
-      let currentDate = `${day}-${month}-${year}`;
-      document.getElementById("tgl").innerHTML = currentDate;
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
