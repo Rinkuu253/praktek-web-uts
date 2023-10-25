@@ -221,7 +221,15 @@ include "sqlConnect.php"
               while ($row = mysqli_fetch_assoc($result)) {
             ?>
                 <tr>
-                  <td><img class="img-fluid rounded-circle" src="databaseFoto/<?php if ($row['foto']) ?>" style="max-width:50px">&nbsp;<?php echo $row['nik']; ?></td>
+                  <td>
+                    <img class="img-fluid rounded-circle" src="
+                  <?php if ($row['foto']) {
+                    echo "databaseFoto/" . $row['foto'];
+                  } else {
+                    echo "images/defaultProfile.jpg";
+                  } ?>" style="width:50px">
+                    &nbsp;<?php echo $row['nik']; ?>
+                  </td>
                   <td><?php echo $row['nama']; ?></td>
                   <td><?php echo $row['position']; ?></td>
                   <td>
@@ -260,7 +268,15 @@ include "sqlConnect.php"
               while ($row = mysqli_fetch_assoc($result)) {
             ?>
                 <tr>
-                  <td><img class="img-fluid rounded-circle" src="databaseFoto/<?php echo $row['foto'] ?>" style="max-width:50px"> &nbsp;<?php echo $row['nik']; ?></td>
+                  <td>
+                    <img class="img-fluid rounded-circle" src="
+                  <?php if ($row['foto']) {
+                    echo "databaseFoto/" . $row['foto'];
+                  } else {
+                    echo "images/defaultProfile.jpg";
+                  } ?>" style="width:50px">
+                    &nbsp;<?php echo $row['nik']; ?>
+                  </td>
                   <td><?php echo $row['nama']; ?></td>
                   <td><?php echo $row['position']; ?></td>
                   <td>
