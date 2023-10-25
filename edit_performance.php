@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
     <title>Edit Performance</title>
 
     <style>
-        .navbar-nav > div > a {
+        .navbar-nav>div>a {
             display: none;
         }
 
@@ -115,6 +115,7 @@ if ($result->num_rows > 0) {
             responsibilityInput.value = responsibility;
             teamworkInput.value = teamwork;
             managementInput.value = management;
+            inputFoto.value = '';
 
             // Menghapus pratinjau foto
             document.getElementById('previewFoto').setAttribute('src', 'databaseFoto/' + foto);
@@ -127,29 +128,29 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
-    
-  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid">
 
-      <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <div>
-            <a class="nav-link active" aria-current="page" href="index.php" >Home</a>
-            <a class="nav-link" href="performance.php">Performance</a>
-          </div>
-          <div>
-            <i class="fa-regular fa-calendar"></i>
-            <p id="tgl">tanggal</p>
-          </div>
+            <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <div>
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link" href="performance.php">Performance</a>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-calendar"></i>
+                        <p id="tgl">tanggal</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
 
     <div class="container">
@@ -317,36 +318,36 @@ if ($result->num_rows > 0) {
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-    const inputFoto = document.getElementById('inputFoto');
-    const modalPreviewFoto = document.getElementById('modalPreviewFoto');
-    const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
+            const inputFoto = document.getElementById('inputFoto');
+            const modalPreviewFoto = document.getElementById('modalPreviewFoto');
+            const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
 
-    // Set nilai atribut src saat halaman dimuat
-    document.getElementById('previewFoto').setAttribute('src', 'dataBaseFoto/<?php echo ($foto) ?>');
-
-    inputFoto.addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const imageUrl = e.target.result;
-                document.getElementById('previewFoto').setAttribute('src', imageUrl);
-                modalPreviewFoto.setAttribute('src', imageUrl); // Set pratinjau di dalam modal
-            };
-            reader.readAsDataURL(file);
-        } else {
+            // Set nilai atribut src saat halaman dimuat
             document.getElementById('previewFoto').setAttribute('src', 'dataBaseFoto/<?php echo ($foto) ?>');
-            modalPreviewFoto.setAttribute('src', ''); // Menghapus pratinjau di dalam modal
-        }
-    });
 
-    // Menampilkan modal saat pratinjau ditekan
-    document.getElementById('previewFoto').addEventListener('click', function() {
-        modalPreviewFoto.setAttribute('src', document.getElementById('previewFoto').getAttribute('src'));
-        // Menampilkan modal
-        previewModal.show();
-    });
-});
+            inputFoto.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const imageUrl = e.target.result;
+                        document.getElementById('previewFoto').setAttribute('src', imageUrl);
+                        modalPreviewFoto.setAttribute('src', imageUrl); // Set pratinjau di dalam modal
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    document.getElementById('previewFoto').setAttribute('src', 'dataBaseFoto/<?php echo ($foto) ?>');
+                    modalPreviewFoto.setAttribute('src', ''); // Menghapus pratinjau di dalam modal
+                }
+            });
+
+            // Menampilkan modal saat pratinjau ditekan
+            document.getElementById('previewFoto').addEventListener('click', function() {
+                modalPreviewFoto.setAttribute('src', document.getElementById('previewFoto').getAttribute('src'));
+                // Menampilkan modal
+                previewModal.show();
+            });
+        });
     </script>
     <script src="script.js"></script>
 </body>
