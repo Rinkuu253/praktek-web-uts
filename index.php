@@ -55,7 +55,7 @@ include "sqlConnect.php"
     <div class="welcome">
       <img src="images/mascot.svg">
       <div class="text">
-        <h1>Selamat datang kembali, Matthew~</h1>
+        <h1>Selamat datang kembali, Kelompok 2~</h1>
         <p>Semoga kamu dalam keadaan sehat selalu, yuk cek laporan karyawan harini</p>
         <button type="button" class="btn btn-success btn-lg"><i class="fa-solid fa-angles-down"></i> Cek laporan keseluruhan</button>
       </div>
@@ -132,7 +132,7 @@ include "sqlConnect.php"
         <div class="card">
           <div class="card-body">
             <div class="desc">
-              <p>Performa Karyawan Tetap</p>
+              <h4>Performa Karyawan Tetap</h4>
               <p>2023</p>
             </div>
 
@@ -179,7 +179,7 @@ include "sqlConnect.php"
         <div class="card">
           <div class="card-body">
             <div class="desc">
-              <p>Performa Karyawan Tidak Tetap</p>
+              <h4>Performa Karyawan Tidak Tetap</h4>
               <p>2023</p>
             </div>
 
