@@ -137,29 +137,40 @@ include "sqlConnect.php"
             </div>
 
             <div class="rates">
+              <?php
+              $sSQL = "SELECT grade, COUNT(*) AS count FROM performance WHERE status_kerja = 'Tetap' AND grade IN ('A', 'B', 'C', 'D') GROUP BY grade";
+              $result = mysqli_query($conn, $sSQL);
+              $gradeCounts = array('A' => 0, 'B' => 0, 'C' => 0, 'D' => 0);
+              while ($row = mysqli_fetch_assoc($result)) {
+                $gradeCounts[$row['grade']] = $row['count'];
+              }
+              ?>
               <div class="rate">
                 <img src="images/emojiA.svg" class="ori">
                 <img src="images/emojiAC.svg" class="hov">
                 <p>A</p>
-                <h1>12</h1>
+                <h1><?php echo $gradeCounts['A']; ?></h1>
               </div>
+
               <div class="rate">
                 <img src="images/emojiB.svg" class="ori">
                 <img src="images/emojiBC.svg" class="hov">
                 <p>B</p>
-                <h1>12</h1>
+                <h1><?php echo $gradeCounts['B']; ?></h1>
               </div>
+
               <div class="rate">
                 <img src="images/emojiC.svg" class="ori">
                 <img src="images/emojiCC.svg" class="hov">
                 <p>C</p>
-                <h1>12</h1>
+                <h1><?php echo $gradeCounts['C']; ?></h1>
               </div>
+
               <div class="rate">
                 <img src="images/emojiD.svg" class="ori">
                 <img src="images/emojiDC.svg" class="hov">
                 <p>D</p>
-                <h1>12</h1>
+                <h1><?php echo $gradeCounts['D']; ?></h1>
               </div>
             </div>
           </div>
@@ -173,130 +184,149 @@ include "sqlConnect.php"
             </div>
 
             <div class="rates">
+              <?php
+              $sSQL = "SELECT grade, COUNT(*) AS count FROM performance WHERE status_kerja = 'Tidak Tetap' AND grade IN ('A', 'B', 'C', 'D') GROUP BY grade";
+              $result = mysqli_query($conn, $sSQL);
+              $gradeCounts = array('A' => 0, 'B' => 0, 'C' => 0, 'D' => 0);
+              while ($row = mysqli_fetch_assoc($result)) {
+                $gradeCounts[$row['grade']] = $row['count'];
+              }
+              ?>
               <div class="rate">
                 <img src="images/emojiA.svg" class="ori">
                 <img src="images/emojiAC.svg" class="hov">
                 <p>A</p>
-                <h1>12</h1>
+                <h1><?php echo $gradeCounts['A']; ?></h1>
               </div>
+
               <div class="rate">
                 <img src="images/emojiB.svg" class="ori">
                 <img src="images/emojiBC.svg" class="hov">
                 <p>B</p>
-                <h1>12</h1>
+                <h1><?php echo $gradeCounts['B']; ?></h1>
               </div>
+
               <div class="rate">
                 <img src="images/emojiC.svg" class="ori">
                 <img src="images/emojiCC.svg" class="hov">
                 <p>C</p>
-                <h1>12</h1>
+                <h1><?php echo $gradeCounts['C']; ?></h1>
               </div>
+
               <div class="rate">
                 <img src="images/emojiD.svg" class="ori">
                 <img src="images/emojiDC.svg" class="hov">
                 <p>D</p>
-                <h1>12</h1>
+                <h1><?php echo $gradeCounts['D']; ?></h1>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="table-respon">
-        <div class="titel">
-          <h2>Karyawan Tetap dengan Performance C dan D</h2>
+      <div class="card mt-5">
+        <div class="card-body">
+          <div class="col-12">
+            <div class="card-title">
+              <h4 class="table-title mt-1">Karyawan Tetap dengan Performance C dan D</h4>
+            </div>
+          </div>
         </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>NIK</th>
-              <th>Name</th>
-              <th>Posisi</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <?php
-            $sSQL = "";
-            $sSQL = " select * from performance where status_kerja = 'Tetap' and (grade = 'C' OR grade = 'D')";
-            $result = mysqli_query($conn, $sSQL);
-            if (mysqli_num_rows($result) > 0) {
-              // output data of each row
-              while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-                <tr>
-                  <td>
-                    <img class="img-fluid rounded-circle" src="
+        <div class="table-responsive p-3">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>NIK</th>
+                <th>Name</th>
+                <th>Posisi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              $sSQL = "";
+              $sSQL = " select * from performance where status_kerja = 'Tetap' and (grade = 'C' OR grade = 'D')";
+              $result = mysqli_query($conn, $sSQL);
+              if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while ($row = mysqli_fetch_assoc($result)) {
+              ?>
+                  <tr>
+                    <td>
+                      <img class="img-fluid rounded-circle" src="
                   <?php if ($row['foto']) {
                     echo "databaseFoto/" . $row['foto'];
                   } else {
                     echo "images/defaultProfile.jpg";
-                  } ?>" style="width:50px">
-                    &nbsp;<?php echo $row['nik']; ?>
-                  </td>
-                  <td><?php echo $row['nama']; ?></td>
-                  <td><?php echo $row['position']; ?></td>
-                  <td>
+                  } ?>" style="width:50px;height:50px;">
+                      &nbsp;<?php echo $row['nik']; ?>
+                    </td>
+                    <td><?php echo $row['nama']; ?></td>
+                    <td><?php echo $row['position']; ?></td>
+                    <td>
 
 
-                  </td>
-                </tr>
-            <?php
+                    </td>
+                  </tr>
+              <?php
+                }
               }
-            }
-            ?>
-          </tbody>
-        </table>
+              ?>
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <div class="table-respon">
-        <div class="titel">
-          <h2>Karyawan Tidak Tetap dengan Performance C dan D</h2>
+      <div class="card mt-5">
+        <div class="card-body">
+          <div class="col-12 ">
+            <div class="card-title">
+              <h4 class="table-title mt-1">Karyawan Tidak Tetap dengan Performance C dan D</h4>
+            </div>
+          </div>
         </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>NIK</th>
-              <th>Name</th>
-              <th>Posisi</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <?php
-            $sSQL = "";
-            $sSQL = " select * from performance where status_kerja = 'Tidak Tetap' and (grade = 'C' OR grade = 'D')";
-            $result = mysqli_query($conn, $sSQL);
-            if (mysqli_num_rows($result) > 0) {
-              // output data of each row
-              while ($row = mysqli_fetch_assoc($result)) {
-            ?>
-                <tr>
-                  <td>
-                    <img class="img-fluid rounded-circle" src="
+        <div class="table-responsive p-3">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>NIK</th>
+                <th>Name</th>
+                <th>Posisi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              $sSQL = "";
+              $sSQL = " select * from performance where status_kerja = 'Tidak Tetap' and (grade = 'C' OR grade = 'D')";
+              $result = mysqli_query($conn, $sSQL);
+              if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while ($row = mysqli_fetch_assoc($result)) {
+              ?>
+                  <tr>
+                    <td>
+                      <img class="img-fluid rounded-circle" src="
                   <?php if ($row['foto']) {
                     echo "databaseFoto/" . $row['foto'];
                   } else {
                     echo "images/defaultProfile.jpg";
-                  } ?>" style="width:50px">
-                    &nbsp;<?php echo $row['nik']; ?>
-                  </td>
-                  <td><?php echo $row['nama']; ?></td>
-                  <td><?php echo $row['position']; ?></td>
-                  <td>
+                  } ?>" style="width:50px;height:50px;">
+                      &nbsp;<?php echo $row['nik']; ?>
+                    </td>
+                    <td><?php echo $row['nama']; ?></td>
+                    <td><?php echo $row['position']; ?></td>
+                    <td>
 
 
-                  </td>
-                </tr>
-            <?php
+                    </td>
+                  </tr>
+              <?php
+                }
               }
-            }
-            ?>
-          </tbody>
-        </table>
+              ?>
+            </tbody>
+          </table>
+        </div>
       </div>
-
-
     </div>
     <script src="script.js"></script>
 </body>
