@@ -222,21 +222,21 @@ if ($result->num_rows > 0) {
                                 </div>
                                 <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
-                                        Responsibility (30%)
+                                        Responsibility
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100)" type="number" required value="<?php echo ($responsibility) ?>" />
+                                    <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100) (30%)" type="number" required value="<?php echo ($responsibility) ?>" />
                                 </div>
                                 <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
-                                        Teamwork (30%)
+                                        Teamwork
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100)" type="number" required value="<?php echo ($teamwork) ?>" />
+                                    <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100) (30%)" type="number" required value="<?php echo ($teamwork) ?>" />
                                 </div>
                                 <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
-                                        Management Time (40%)
+                                        Management Time
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100)" type="number" required value="<?php echo ($management) ?>" />
+                                    <input class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100) (40%)" type="number" required value="<?php echo ($management) ?>" />
                                 </div>
                             </div>
                             <div class="mt-4">

@@ -12,9 +12,10 @@
     <title>Tambah Performance</title>
 
     <style>
-        .navbar-nav > div > a {
+        .navbar-nav>div>a {
             display: none;
         }
+
         .container {
             padding: 2rem;
         }
@@ -92,33 +93,33 @@
 
         }
     </script>
-    
+
 </head>
 
 <body>
-    
-  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid">
 
-      <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <div>
-            <a class="nav-link active" aria-current="page" href="index.php" >Home</a>
-            <a class="nav-link" href="performance.php">Performance</a>
-          </div>
-          <div>
-            <i class="fa-regular fa-calendar"></i>
-            <p id="tgl">tanggal</p>
-          </div>
+            <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <div>
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link" href="performance.php">Performance</a>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-calendar"></i>
+                        <p id="tgl">tanggal</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
     <div class="container">
         <div class="content-body">
@@ -190,21 +191,21 @@
                                 </div>
                                 <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
-                                        Responsibility (30%)
+                                        Responsibility
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100)" type="number" required min="0" max="100" />
+                                    <input class="form-control inputForm mt-2" name="responsibility" id="responsibility" placeholder="(0-100) (30%)" type="number" required min="0" max="100" />
                                 </div>
                                 <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
-                                        Teamwork (30%)
+                                        Teamwork
                                     </label>
-                                    <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100)" type="number" required min="0" max="100" />
+                                    <input class="form-control inputForm mt-2" name="teamwork" id="teamwork" placeholder="(0-100) (30%)" type="number" required min="0" max="100" />
                                 </div>
                                 <div class="col-12 col-xxl-2 col-sm-6 form-input mt-2">
                                     <label>
-                                        Management Time (40%)
+                                        Management Time
                                     </label>
-                                    <input min="0" max="100" class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100)" type="number" required min="0" max="100" />
+                                    <input min="0" max="100" class="form-control inputForm mt-2" name="management" id="management" placeholder="(0-100) (40%)" type="number" required min="0" max="100" />
                                 </div>
                             </div>
                             <div class="mt-4">
