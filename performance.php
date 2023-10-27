@@ -135,8 +135,8 @@ include "sqlConnect.php"
                                         <td align="center">
                                             <a href="view_performance.php?nik=<?php echo $row['nik']; ?>" class="btn btn-info btn-sm">View</a>
                                             <a href="edit_performance.php?nik=<?php echo $row['nik']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapus">Delete</button>
-                                            <div class="modal fade" id="modalHapus">
+                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal<?php echo $row['nik'] ?>">Delete</button>
+                                            <div class="modal fade" id="modal<?php echo $row['nik'] ?>">
                                                 <div class="modal-dialog modal-dialog-centered">
                                                     <div class="modal-content">
 
