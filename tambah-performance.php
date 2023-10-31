@@ -124,7 +124,7 @@
     <div class="container">
         <div class="content-body">
             <div class="content-fluid">
-                <h1 class="PageTitle mt-3">Tambah Karyawan</h1>
+                <h1 class="PageTitle mt-3">Tambah Data Karyawan</h1>
                 <form action="add-performance.php" method="POST" enctype="multipart/form-data" onsubmit="return simpan()">
                     <div class="card">
                         <div class="card-body">
