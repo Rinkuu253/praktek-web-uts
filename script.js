@@ -21,11 +21,14 @@ document.getElementById('previewFoto').addEventListener('click', function() {
 
 
 
-// dari tambah performance
-document.addEventListener('DOMContentLoaded', function() {
-    const inputFoto = document.getElementById('inputFoto');
-    const modalPreviewFoto = document.getElementById('modalPreviewFoto');
-    const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
+// dari tambah n edit performance
+const inputFoto = document.getElementById('inputFoto');
+const modalPreviewFoto = document.getElementById('modalPreviewFoto');
+const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
+
+document.addEventListener('click', function() {
+    // Set nilai atribut src saat halaman dimuat
+    // document.getElementById('previewFoto').setAttribute('src', 'dataBaseFoto/<?php echo ($foto) ?>');
 
     inputFoto.addEventListener('change', function(event) {
         const file = event.target.files[0];
@@ -39,38 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
             reader.readAsDataURL(file);
         } else {
             document.getElementById('previewFoto').setAttribute('src', '');
-            modalPreviewFoto.setAttribute('src', ''); // Menghapus pratinjau di dalam modal
-        }
-    });
-
-    // Menampilkan modal saat pratinjau ditekan
-    document.getElementById('previewFoto').addEventListener('click', function() {
-        previewModal.show();
-    });
-});
-
-
-// dari edit performance 
-document.addEventListener('DOMContentLoaded', function() {
-    const inputFoto = document.getElementById('inputFoto');
-    const modalPreviewFoto = document.getElementById('modalPreviewFoto');
-    const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
-
-    // Set nilai atribut src saat halaman dimuat
-    document.getElementById('previewFoto').setAttribute('src', 'dataBaseFoto/<?php echo ($foto) ?>');
-
-    inputFoto.addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const imageUrl = e.target.result;
-                document.getElementById('previewFoto').setAttribute('src', imageUrl);
-                modalPreviewFoto.setAttribute('src', imageUrl); // Set pratinjau di dalam modal
-            };
-            reader.readAsDataURL(file);
-        } else {
-            document.getElementById('previewFoto').setAttribute('src', 'dataBaseFoto/<?php echo ($foto) ?>');
             modalPreviewFoto.setAttribute('src', ''); // Menghapus pratinjau di dalam modal
         }
     });

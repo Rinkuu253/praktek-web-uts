@@ -174,9 +174,9 @@ if ($result->num_rows > 0) {
                             </div>
                             <div class="row mt-4">
                                 <div class="col-12 form-input mt-2">
-                                    <img src="dataBaseFoto/<?php echo ($foto) ?>" alt="No Image" id="previewFoto" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                                    <img src="dataBaseFoto/<?php echo $foto ?>" alt="No Image" id="previewFoto" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
                                     <div class="mt-3">
-                                        <input class="form-control inputForm" type="file" placeholder="Pilih Foto" id="inputFoto" name="inputFoto" accept="image/*" value="<?php echo $foto; ?>" style="max-width:50%">
+                                        <input class="form-control inputForm" type="file" placeholder="Pilih Foto" id="inputFoto" name="inputFoto" accept="image/*" value="<?php echo $foto ?>" style="max-width:50%">
                                     </div>
 
                                 </div>
@@ -251,6 +251,8 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>
                     </div>
+
+                    <!-- MODAL SIMPAN DATA -->
                     <div class="modal fade" id="modalSimpan">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -275,6 +277,8 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>
                     </div>
+
+                    <!-- MODAL CLEAR -->
                     <div class="modal fade" id="modalClear">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -299,14 +303,16 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+
+                    <!-- MODAL PREVIEW -->
+                    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModal" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="previewModalLabel">Preview Foto</h5>
+                                    <h5 class="modal-title" id="previewModal">Preview Foto</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body text-center">
                                     <img src="" id="modalPreviewFoto" class="img-fluid" alt="Pratinjau Foto">
                                 </div>
                             </div>

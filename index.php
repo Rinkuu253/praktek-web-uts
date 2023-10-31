@@ -56,15 +56,15 @@ include "sqlConnect.php"
       <img src="images/mascot.svg">
       <div class="text">
         <h1>Selamat datang kembali, Kelompok 2~</h1>
-        <p>Semoga kamu dalam keadaan sehat selalu, yuk cek laporan karyawan harini</p>
-        <button type="button" class="btn btn-success btn-lg"><i class="fa-solid fa-angles-down"></i> Cek laporan keseluruhan</button>
+        <p>Semoga kamu dalam keadaan sehat selalu, yuk cek performa karyawan yang kurang baik</p>
+        <button type="button" class="btn btn-outline-success btn-lg"><a href="#performa-karyawan"><i class="fa-solid fa-angles-down"></i> Cek performa karyawan</a></button>
       </div>
     </div>
 
-    <div class="jumlah-karyawan">
+    <div id="jumlah-karyawan">
       <div class="titel">
         <h2>Jumlah Karyawan</h2>
-        <a href="">Lihat selengkapnya</a>
+        <a href="performance.php">Lihat selengkapnya</a>
       </div>
 
       <div class="cards">
@@ -146,10 +146,10 @@ include "sqlConnect.php"
       </div>
     </div>
 
-    <div class="performa-karyawan">
+    <div id="performa-karyawan">
       <div class="titel">
         <h2>Performa Karyawan</h2>
-        <a href="">Lihat selengkapnya</a>
+        <a href="performance.php">Lihat selengkapnya</a>
       </div>
 
       <div class="cards">

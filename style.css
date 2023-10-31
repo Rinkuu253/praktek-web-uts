@@ -61,12 +61,15 @@ h1 {
         p {
             font-size: 1.5rem;
         }
+        .btn-success {
+            --bs-btn-bg: #fff !important;
+        }
     }
     
 }
 
 
-.jumlah-karyawan, .performa-karyawan{
+#jumlah-karyawan, #performa-karyawan{
     display: flex;
     flex-direction: column;
     margin: 100px 0 100px 0;
@@ -85,7 +88,7 @@ h1 {
 
 
 
-.jumlah-karyawan {
+#jumlah-karyawan {
     .cards {
         display: grid;
 
@@ -138,7 +141,7 @@ h1 {
 }
 
 
-.performa-karyawan {
+#performa-karyawan {
     display: flex;
 
     .cards {
@@ -235,14 +238,14 @@ h1 {
         flex-direction: column;
     }
 
-    .jumlah-karyawan {
+    #jumlah-karyawan {
         .cards {
             grid-template-rows: 1fr 1fr 1fr;
             row-gap: 1.5rem;
         }
     }
 
-    .performa-karyawan {
+    #performa-karyawan {
         .cards {
             grid-template-rows: 1fr 1fr;
             row-gap: 1.5rem;
@@ -292,14 +295,14 @@ h1 {
         
     }
     
-    .jumlah-karyawan {
+    #jumlah-karyawan {
         .cards {
             grid-template-columns: 1fr 1fr 1fr; 
             column-gap: 1rem;
         }
     }
 
-    .performa-karyawan {
+    #performa-karyawan {
         .cards {
             grid-template-columns: 1fr 1fr;
             column-gap: 1rem;
