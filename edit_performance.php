@@ -323,6 +323,16 @@ if ($result->num_rows > 0) {
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        document.getElementById('previewFoto').addEventListener('click', function() {
+            const modalPreviewFoto = document.getElementById('modalPreviewFoto');
+            const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
+            // Mengatur pratinjau di dalam modal sesuai dengan gambar pratinjau yang terlihat
+            modalPreviewFoto.setAttribute('src', document.getElementById('previewFoto').getAttribute('src'));
+            // Menampilkan modal
+            previewModal.show();
+        });
+    </script>
 </body>
 
 </html>
