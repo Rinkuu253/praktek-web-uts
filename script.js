@@ -7,28 +7,11 @@ let year = date.getFullYear();
 let currentDate = `${day}-${month}-${year}`;
 document.getElementById("tgl").innerHTML = currentDate;
 
-
-
-// dari view performance
-document.getElementById('previewFoto').addEventListener('click', function() {
+// dari tambah n edit performance
+document.addEventListener('DOMContentLoaded', function() {
+    const inputFoto = document.getElementById('inputFoto');
     const modalPreviewFoto = document.getElementById('modalPreviewFoto');
     const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
-    // Mengatur pratinjau di dalam modal sesuai dengan gambar pratinjau yang terlihat
-    modalPreviewFoto.setAttribute('src', document.getElementById('previewFoto').getAttribute('src'));
-    // Menampilkan modal
-    previewModal.show();
-});
-
-
-
-// dari tambah n edit performance
-const inputFoto = document.getElementById('inputFoto');
-const modalPreviewFoto = document.getElementById('modalPreviewFoto');
-const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
-
-document.addEventListener('click', function() {
-    // Set nilai atribut src saat halaman dimuat
-    // document.getElementById('previewFoto').setAttribute('src', 'dataBaseFoto/<?php echo ($foto) ?>');
 
     inputFoto.addEventListener('change', function(event) {
         const file = event.target.files[0];
@@ -48,8 +31,6 @@ document.addEventListener('click', function() {
 
     // Menampilkan modal saat pratinjau ditekan
     document.getElementById('previewFoto').addEventListener('click', function() {
-        modalPreviewFoto.setAttribute('src', document.getElementById('previewFoto').getAttribute('src'));
-        // Menampilkan modal
         previewModal.show();
     });
 });

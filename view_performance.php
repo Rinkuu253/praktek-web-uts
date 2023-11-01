@@ -38,7 +38,7 @@ if ($result->num_rows > 0) {
     <title>Lihat Performance</title>
 
     <style>
-        .navbar-nav > div > a {
+        .navbar-nav>div>a {
             display: none;
         }
 
@@ -98,29 +98,29 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
-     
-  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid">
 
-      <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <div>
-            <a class="nav-link active" aria-current="page" href="index.php" >Home</a>
-            <a class="nav-link" href="performance.php">Performance</a>
-          </div>
-          <div>
-            <i class="fa-regular fa-calendar"></i>
-            <p id="tgl">tanggal</p>
-          </div>
+            <a class="navbar-brand" href="#"><img src="images/logo.svg"><img src="images/logoText.svg"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <div>
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link" href="performance.php">Performance</a>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-calendar"></i>
+                        <p id="tgl">tanggal</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
     <div class="container">
         <div class="content-body">
@@ -250,7 +250,25 @@ if ($result->num_rows > 0) {
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        const date = new Date();
+
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        let currentDate = `${day}-${month}-${year}`;
+        document.getElementById("tgl").innerHTML = currentDate;
+
+        document.getElementById('previewFoto').addEventListener('click', function() {
+            const modalPreviewFoto = document.getElementById('modalPreviewFoto');
+            const previewModal = new bootstrap.Modal(document.getElementById('previewModal'));
+            // Mengatur pratinjau di dalam modal sesuai dengan gambar pratinjau yang terlihat
+            modalPreviewFoto.setAttribute('src', document.getElementById('previewFoto').getAttribute('src'));
+            // Menampilkan modal
+            previewModal.show();
+        });
+    </script>
 </body>
 
 </html>
